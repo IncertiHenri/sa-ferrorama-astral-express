@@ -22,32 +22,32 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="usuarios_cadastrados">
 
-<div class="conteudo">
+    <div class="conteudo">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
@@ -87,67 +87,69 @@ $resultado = mysqli_query($conn, $sql);
 
         <main>
 
-    <div class="fundo_cadastros">
+            <div class="fundo_cadastros">
 
-        <div class="cadastros">
+                <div class="cadastros">
 
-            <div class="borda_verde_flex">
-                <h2 id="titulo_tabela">Usuários Cadastrados</h2>
-            </div>
-            
-                <div class="borda_verde">
+                    <div class="borda_verde_flex">
+                        <h2 id="titulo_tabela">Usuários Cadastrados</h2>
+                    </div>
 
-                    <div class="tabela">
-                
-                    <table>
+                    <div class="borda_verde">
 
-                        <tr class="titulos_tabelas">
-                            <td>Matrícula</td>
-                            <td>Nome</td>
-                            <td>Usuário</td>
-                            <td>E-mail</td>
-                            <td>Cargo</td>
-                            <?php if ($_SESSION['tipo'] === 'admin') { echo "<td colspan='7'>Ações</td>"; } ?>
-                        </tr>
-                        
+                        <div class="tabela">
 
-                        
-                        <?php
+                            <table>
 
-                        while ($usuario = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr class='campos_informacoes'>";
-                            echo "<td>" . $usuario["id_usuario"] . "</td>";
-                            echo "<td>" . $usuario["nome"] . "</td>";
-                            echo "<td>" . $usuario["usuario"] . "</td>";
-                            echo "<td>" . $usuario["email"] . "</td>";
-                            echo "<td>" . $usuario["perfil"] . "</td>";
+                                <tr class="titulos_tabelas">
+                                    <td>Matrícula</td>
+                                    <td>Nome</td>
+                                    <td>Usuário</td>
+                                    <td>E-mail</td>
+                                    <td>Cargo</td>
+                                    <?php if ($_SESSION['tipo'] === 'admin') {
+                                        echo "<td colspan='7'>Ações</td>";
+                                    } ?>
+                                </tr>
 
-                            if ($_SESSION['tipo'] === 'admin') {
-                                echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
-                            echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+
+
+                                <?php
+
+                                while ($usuario = mysqli_fetch_assoc($resultado)) {
+                                    echo "<tr class='campos_informacoes'>";
+                                    echo "<td>" . $usuario["id_usuario"] . "</td>";
+                                    echo "<td>" . $usuario["nome"] . "</td>";
+                                    echo "<td>" . $usuario["usuario"] . "</td>";
+                                    echo "<td>" . $usuario["email"] . "</td>";
+                                    echo "<td>" . $usuario["perfil"] . "</td>";
+
+                                    if ($_SESSION['tipo'] === 'admin') {
+                                        echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                    }
+
+                                    echo "</tr>";
                                 }
+                                ?>
 
-                                echo "</tr>";
-                        }
-                        ?>
-                        
                         </div>
-                   </table>
+                        </table>
 
+                    </div>
                 </div>
-            </div>
-                
+
                 <?php if ($_SESSION['tipo'] === 'admin') { ?>
-                <div class="borda_verde_flex">
-                    <button id="botao_sensor_novo" onclick="cadastroUsuarios()">
-                       Cadastrar Usuário
-                    </button>
+                    <div class="borda_verde_flex">
+                        <button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                            Cadastrar Usuário
+                        </button>
                     </div>
                 <?php } ?>
 
             </div>
 
-        </div>
+    </div>
 
     </main>
 

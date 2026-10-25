@@ -30,27 +30,27 @@ $id = $_GET["id"];
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
             </div>
         </div>
     </header>
 
-<div class="conteudo">
+    <div class="conteudo">
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
@@ -88,21 +88,21 @@ $id = $_GET["id"];
             </div>
         </div>
 
-<main>
+        <main>
 
-        <button id="botao_voltar" onclick="usuariosCadastrados()">
-            Retornar
-        </button>
+            <button id="botao_voltar" onclick="usuariosCadastrados()">
+                Retornar
+            </button>
 
-        <div class="fundo_form_cadastros">
+            <div class="fundo_form_cadastros">
 
-            <div class="flex_column">
+                <div class="flex_column">
 
-                <div class="borda_verde_flex">
-                    <h1 class="titulo_cadastro_form">Cadastro de Usuários</h1>
-                </div>
+                    <div class="borda_verde_flex">
+                        <h1 class="titulo_cadastro_form">Cadastro de Usuários</h1>
+                    </div>
 
-                <div class="inserir_dados_cadastro">
+                    <div class="inserir_dados_cadastro">
 
                         <form action="cadastrar_usuarios.php" method="POST" id="form_cadastro">
 
@@ -139,23 +139,23 @@ $id = $_GET["id"];
 
                                 </div>
 
-                                </div>
+                            </div>
 
-                                </div>
-                                <div class="borda_verde_flex">
-                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                    </div>
+                    <div class="borda_verde_flex">
+                        <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                    </div>
+
+
+                    </form>
+
+                </div>
             </div>
 
-                            
-                        </form>
-
-            </div>
-        </div>
-
-    </main>
+        </main>
 
 
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
 
     </div>
 

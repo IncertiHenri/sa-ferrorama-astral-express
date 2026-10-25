@@ -21,35 +21,35 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 <body id="body_tela_inicial">
 
-<div class="conteudo">
+    <div class="conteudo">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
 
-  
+
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
@@ -81,38 +81,38 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários Cadastrados
+                    Usuários Cadastrados
                 </button>
 
             </div>
         </div>
 
-          <main>
-        
-        <?php
+        <main>
 
-        $id = $_GET["id"];
+            <?php
 
-        echo "<div class='fundo_confirmacao_exclusao'>";
-        echo "<div class='confirmacao_exclusao'>";
+            $id = $_GET["id"];
 
-        echo "<h2 class='texto_certeza_exclusao'>Tem certeza que quer excluir?</h2>";
-        echo "<div class='container_botoes'>";
+            echo "<div class='fundo_confirmacao_exclusao'>";
+            echo "<div class='confirmacao_exclusao'>";
 
-        echo "<a class='botao_crud' href='excluir_rota.php?id=$id'>Sim</a>";
-        echo "<a class='botao_crud' href='visualizacao_rotas.php'>Não</a>";
+            echo "<h2 class='texto_certeza_exclusao'>Tem certeza que quer excluir?</h2>";
+            echo "<div class='container_botoes'>";
 
-        echo "</div>";
+            echo "<a class='botao_crud' href='excluir_rota.php?id=$id'>Sim</a>";
+            echo "<a class='botao_crud' href='visualizacao_rotas.php'>Não</a>";
 
-        echo "</div>";
-        echo "</div>";
+            echo "</div>";
 
-        ?>
+            echo "</div>";
+            echo "</div>";
+
+            ?>
 
 
-        <script src="../scripts/script.js"></script>
+            <script src="../scripts/script.js"></script>
 
-        </div>
+    </div>
 
 </body>
 

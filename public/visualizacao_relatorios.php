@@ -124,7 +124,9 @@ if (!isset($_SESSION['usuario'])) {
                                     </select>
                                 </div>
                                 <div class="sem_flex" id="local_botao_relatorios">
-                                <button type="submit" id="filtrar_relatorios"><h2>Filtrar</h2></button>
+                                    <button type="submit" id="filtrar_relatorios">
+                                        <h2>Filtrar</h2>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -134,41 +136,41 @@ if (!isset($_SESSION['usuario'])) {
 
                     <div class="borda_verde">
 
-                    <table>
+                        <table>
 
-                    <div class="tabela">
+                            <div class="tabela">
 
-                        <tr>
-                            <div class="flex" id="ultimos_relatorios">
-                                <td>Nome</td>
-                                <td>Data de Criação</td>
-                                <td>Tipo de relatório</td>
-                                <td>Ações</td>
-                            </div>
-                        </tr>
+                                <tr>
+                                    <div class="flex" id="ultimos_relatorios">
+                                        <td>Nome</td>
+                                        <td>Data de Criação</td>
+                                        <td>Tipo de relatório</td>
+                                        <td>Ações</td>
+                                    </div>
+                                </tr>
 
-                        <tr>
-                            <div class="flex">
-                                <th></th>
+                                <tr>
+                                    <div class="flex">
+                                        <th></th>
 
-                                <th></th>
+                                        <th></th>
 
-                                <th></th>
+                                        <th></th>
 
-                                <th></th>
-                            </div>
-                        </tr>
+                                        <th></th>
+                                    </div>
+                                </tr>
 
 
 
-                    </table>
-                    </div>
+                        </table>
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
 
-        <script src="../scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
     </div>
 </body>
 

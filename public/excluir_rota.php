@@ -27,24 +27,24 @@ if ($resultado->num_rows > 0) {
     exit();
 } else {
 
-$sql = "DELETE FROM trem_rota WHERE id_rota = ?";
+    $sql = "DELETE FROM trem_rota WHERE id_rota = ?";
 
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
 
-$sql = "DELETE FROM rota WHERE id_rota = ?";
+    $sql = "DELETE FROM rota WHERE id_rota = ?";
 
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "i", $id);
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $id);
 
-if (mysqli_stmt_execute($stmt)) {
-    header("Location: visualizacao_rotas.php");
-    exit();
-    
-} else {
-    echo "Erro ao excluir a rota: " . mysqli_error($conn);
-}
+    if (mysqli_stmt_execute($stmt)) {
+        header("Location: visualizacao_rotas.php");
+        exit();
+
+    } else {
+        echo "Erro ao excluir a rota: " . mysqli_error($conn);
+    }
 
 }
 

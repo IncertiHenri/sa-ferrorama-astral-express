@@ -1,6 +1,6 @@
 <?php
 
-include ("../infra/conexao.php");
+include("../infra/conexao.php");
 
 session_start();
 
@@ -27,21 +27,21 @@ if ($resultado->num_rows > 0) {
     exit();
 } else {
 
-$sql = "DELETE FROM trem_rota WHERE id_trem = ?";
+    $sql = "DELETE FROM trem_rota WHERE id_trem = ?";
 
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
 
-$sql = "DELETE FROM trem WHERE id_trem = ?";
+    $sql = "DELETE FROM trem WHERE id_trem = ?";
 
-$stmt = mysqli_prepare($conn, $sql);
+    $stmt = mysqli_prepare($conn, $sql);
 
-mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_bind_param($stmt, "i", $id);
 
-mysqli_stmt_execute($stmt);
+    mysqli_stmt_execute($stmt);
 
-header ("Location: visualizacao_trens.php");
+    header("Location: visualizacao_trens.php");
 }
 
 ?>

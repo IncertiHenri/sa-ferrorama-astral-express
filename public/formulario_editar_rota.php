@@ -38,35 +38,35 @@ if ($resultado_usuario === false) {
 
 <body id="usuarios_cadastrados">
 
- <div class="conteudo">
+    <div class="conteudo">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
 
-    
+
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
@@ -90,7 +90,7 @@ if ($resultado_usuario === false) {
                 </button>
 
                 <button class='botao_menu_atual' id='botao_menu_cadastro_rotas' onclick='visualizacaoRotas()'>
-                Visualização de Rotas
+                    Visualização de Rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
@@ -115,12 +115,12 @@ if ($resultado_usuario === false) {
 
         <main>
 
-        <button id="botao_voltar" onclick="visualizacaoRotas()">
-            Voltar
-        </button>
+            <button id="botao_voltar" onclick="visualizacaoRotas()">
+                Voltar
+            </button>
 
 
-        <div class="fundo_form_cadastros">
+            <div class="fundo_form_cadastros">
 
                 <div class="flex_column">
 
@@ -130,72 +130,72 @@ if ($resultado_usuario === false) {
 
                     <div class="inserir_dados_cadastro">
 
-                            <form action="editar_rota.php?id=<?php echo $id ?>" method="POST" id="form_cadastro">
+                        <form action="editar_rota.php?id=<?php echo $id ?>" method="POST" id="form_cadastro">
+                            <div class="flex_column">
+
                                 <div class="flex_column">
-
-                                    <div class="flex_column">
-                                        <div class="flex_column" id="campos_cadastro_sensores">
-                                            <div class="flex_column">
-                                                <label for="hora" class="label_form">Data de Criação:</label>
-                                                <input type="date" name="hora" class="input_form" required>
-                                            </div>
-
-                                            <div class="flex_column">
-                                                <label for="origem" class="label_form">Origem:</label>
-                                                <input type="text" name="origem" class="input_form" required>
-                                            </div>
-
-                                            <div class="flex_column">
-                                                <label for="destino" class="label_form">Destino:</label>
-                                                <input type="text" name="destino" class="input_form" required>
-                                            </div>
-                                            <div class="flex_column">
-                                                <label for="tempo" class="label_form">Tempo:</label>
-                                                <input type="time" name="tempo" class="input_form" required>
-                                            </div>
-                                            <div class="flex_column">
-                                                <label for="trem_associado" class="label_form">Trem
-                                                    Associado:</label>
-                                                <select name="trem_associado" class="input_form" required>
-                                                    <option value="">Selecione um Trem</option>
-                                                    <?php
-                                                    while ($trem = mysqli_fetch_assoc($resultado_trem)) {
-                                                        echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                            <div class="flex_column">
-                                                <label for="usuario_associado" class="label_form">Usuário
-                                                    Associado:</label>
-                                                <select name="usuario_associado" class="input_form" required>
-                                                    <option value="">Selecione um Usuário</option>
-                                                    <?php
-                                                    while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
-                                                        echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-
+                                    <div class="flex_column" id="campos_cadastro_sensores">
+                                        <div class="flex_column">
+                                            <label for="hora" class="label_form">Data de Criação:</label>
+                                            <input type="date" name="hora" class="input_form" required>
                                         </div>
+
+                                        <div class="flex_column">
+                                            <label for="origem" class="label_form">Origem:</label>
+                                            <input type="text" name="origem" class="input_form" required>
+                                        </div>
+
+                                        <div class="flex_column">
+                                            <label for="destino" class="label_form">Destino:</label>
+                                            <input type="text" name="destino" class="input_form" required>
+                                        </div>
+                                        <div class="flex_column">
+                                            <label for="tempo" class="label_form">Tempo:</label>
+                                            <input type="time" name="tempo" class="input_form" required>
+                                        </div>
+                                        <div class="flex_column">
+                                            <label for="trem_associado" class="label_form">Trem
+                                                Associado:</label>
+                                            <select name="trem_associado" class="input_form" required>
+                                                <option value="">Selecione um Trem</option>
+                                                <?php
+                                                while ($trem = mysqli_fetch_assoc($resultado_trem)) {
+                                                    echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="flex_column">
+                                            <label for="usuario_associado" class="label_form">Usuário
+                                                Associado:</label>
+                                            <select name="usuario_associado" class="input_form" required>
+                                                <option value="">Selecione um Usuário</option>
+                                                <?php
+                                                while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
+                                                    echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
                                     </div>
                                 </div>
-                        
-                    
-            </div>
+                            </div>
+
+
+                    </div>
                     <div class="borda_verde_flex">
-                <button type="submit" class="botao_form_cadastro">Atualizar</button>
+                        <button type="submit" class="botao_form_cadastro">Atualizar</button>
+                    </div>
+                    </form>
+
+                </div>
             </div>
-                </form>
 
-            </div>
-            </div>
-
-    </main>
+        </main>
 
 
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
 
     </div>
 

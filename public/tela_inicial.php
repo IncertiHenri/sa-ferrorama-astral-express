@@ -26,17 +26,19 @@ if (!isset($_SESSION['usuario'])) {
 
 <body>
 
- <div class="conteudo">
+    <div class="conteudo">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>! Joinville | <p class="acesso_admin"> <span id="temperatura">Carregando...</span></p></p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>! Joinville |
+                <p class="acesso_admin"> <span id="temperatura">Carregando...</span></p>
+                </p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         <div class="menu">
             <div class="conteiner_menu_logo">
@@ -90,29 +92,29 @@ if (!isset($_SESSION['usuario'])) {
 
         <main>
 
-        <div class="conteudo_tela_inicial">
+            <div class="conteudo_tela_inicial">
 
-            <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
+                <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
 
-            <div class="area_boas_vindas">
+                <div class="area_boas_vindas">
 
-                <div>
-                    <h2 class="titulo_boas_vindas">Bem vindo(a), <?php echo $_SESSION['user']; ?>!</h2>
+                    <div>
+                        <h2 class="titulo_boas_vindas">Bem vindo(a), <?php echo $_SESSION['user']; ?>!</h2>
 
-                    <p class="descricao_boas_vindas">
-                        Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
-                        sensores e trens, visualize relatórios e monitore os usuários do sistema
-                        de forma prática, rápida e eficiente.
-                    </p>
+                        <p class="descricao_boas_vindas">
+                            Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
+                            sensores e trens, visualize relatórios e monitore os usuários do sistema
+                            de forma prática, rápida e eficiente.
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+        </main>
 
-    </main>
-
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
 
     </div>
 
