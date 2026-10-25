@@ -32,6 +32,7 @@ $rota = $conn->query($sql);
 
 <body id="visualizacao_sensores">
 
+ <div class="conteudo">
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -41,8 +42,6 @@ $rota = $conn->query($sql);
             </div>
         </div>
     </header>
-
-    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -95,6 +94,8 @@ $rota = $conn->query($sql);
             </div>
         </div>
 
+        <main>
+            
         <div class="fundo_cadastros">
 
             <div class="cadastros">
@@ -103,9 +104,9 @@ $rota = $conn->query($sql);
                     <h2 id="titulo_tabela">Visualização de Rotas</h2>
                 </div>
 
-                <div class="tabela">
-
                     <div class="borda_verde">
+
+                    <div class="tabela">
 
                         <table>
 
@@ -117,12 +118,12 @@ $rota = $conn->query($sql);
                                 <td>Tempo</td>
                                 <td>Trem Associado</td>
                                 <td>Usuário Associado</td>
-                                <?php if ($_SESSION['tipo'] === 'admin') { echo "<td>Ação</td>"; } ?>
+                                <?php if ($_SESSION['tipo'] === 'admin') { echo "<td colspan='9'>Ação</td>"; } ?>
                             </tr>
                             <?php
 
                             while ($resultado = mysqli_fetch_assoc($rota)) {
-                                echo "<tr>";
+                                echo "<tr class='campos_informacoes'>";
                                 echo "<td>" . $resultado["id_rota"] . "</td>";
                                 echo "<td>" . $resultado["hora"] . "</td>";
                                 echo "<td>" . $resultado["origem"] . "</td>";
@@ -157,6 +158,7 @@ $rota = $conn->query($sql);
     </main>
 
     <script src="../scripts/script.js"></script>
+ </div>
 
 </body>
 

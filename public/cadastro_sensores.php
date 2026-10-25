@@ -26,7 +26,9 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     <title>Cadastro de sensores</title>
 </head>
 
-<body id="cadastro_sensores">
+<body>
+
+<div class="conteudo">
 
     <header>
         <div id="navbar">
@@ -89,55 +91,60 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
     </div>
 
-    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoSensores()">
-        <img src="../assets/img/sair.png" alt="voltar">
-        Voltar
+    <button id="botao_voltar" onclick="visualizacaoSensores()">
+        Retornar
     </button>
 
-    <main id="main_cadastro_sensores">
+    <main>
 
-        <div class="campo_verde_medio_sensores">
-            <div class="campo_borda_verde">
-                <h1 class="titulo_cadastro_sensor">Cadastro de Novos Sensores</h1>
+        <div class="fundo_form_cadastros">
+            <div class="flex_column">
+            <div class="borda_verde_flex">
+                <h1 class="titulo_cadastro_form">Cadastro de sensores</h1>
             </div>
-            <div class="campo_borda_verde" id="justify_align">
+            <div class="inserir_dados_cadastro">
 
-                <form action="#" id="formulario_cadastro_sensores">
+                <form action="#" id="form_cadastro">
 
                     <div class="flex_column">
-                        <div class="flex" id="campos_cadastro_sensores">
                             <div class="flex_column">
-                                <label for="nome" class="texto_cadastros">Nome</label>
-                                <input type="text" name="nome" class="campo_cadastros">
+                                <label for="nome" class="label_form">Nome:</label>
+                                <input type="text" name="nome" class="input_form">
                             </div>
 
                             <div class="flex_column">
-                                <label for="loc" class="texto_cadastros">Localização</label>
-                                <input type="text" name="loc" class="campo_cadastros">
+                                <label for="loc" class="label_form">Localização:</label>
+                                <input type="text" name="loc" class="input_form">
                             </div>
 
                             <div class="flex_column">
-                                <label for="dado" class="texto_cadastros">Tipo de dado</label>
-                                <select name="dado" class="campo_cadastros">
+                                <label for="dado" class="label_form">Tipo de dado:</label>
+                                <select name="dado" class="input_form">
                                     <option value="">Selecione</option>
                                     <option value="1">Velocidade</option>
                                     <option value="2">Temperatura</option>
                                     <option value="3">Falha</option>
                                 </select>
                             </div>
-                        </div>
-                        <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
+                        
+    </div>
+</div>
+                            <div class="borda_verde_flex">
+                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+            </div>
+                    
 
-                    </div>
+                    
                 </form>
 
-            </div>
+            
         </div>
         </div>
+        
     </main>
 
     <script src="../scripts/script.js"></script>
-
+</div>
 </body>
 
 </html>

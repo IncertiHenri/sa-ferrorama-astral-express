@@ -86,7 +86,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
     </div>
 
     <main>
-        <div class="fundo_cadastros">
+        <div class="fundo_form_cadastros">
             <div>
                 <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
                 <div class="borda_verde_flex">
@@ -97,16 +97,16 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                     <div>
                         <form action="#" class="flex" id="formulario_visualizacao_relatorios">
                             <div class="flex_column">
-                                <label for="data_inicio" class="texto_cadastros">Data início</label>
-                                <input type="date" name="data_inicio" class="campo_cadastros">
+                                <label for="data_inicio" class="label_form">Data início:</label>
+                                <input type="date" name="data_inicio" class="input_form">
                             </div>
                             <div class="flex_column">
-                                <label for="data_fim" class="texto_cadastros">Data fim</label>
-                                <input type="date" name="data_fim" class="campo_cadastros">
+                                <label for="data_fim" class="label_form">Data fim:</label>
+                                <input type="date" name="data_fim" class="input_form">
                             </div>
                             <div class="flex_column">
-                                <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
-                                <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
+                                <label for="tipo_relatorio" class="label_form">Tipo de relatório:</label>
+                                <select name="tipo_relatorio" id="texto_cadastros" class="input_form">
                                     <option value="1">Todos</option>
                                     <option value="2">X</option>
                                     <option value="3">X</option>
@@ -115,8 +115,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                                 </select>
                             </div>
                             <div class="flex_column">
-                                <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
-                                <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
+                                <label for="tipo_falha" class="label_form">Tipo de falha:</label>
+                                <select name="tipo_falha" id="tipo_falha" class="input_form">
                                     <option value="1">Todos</option>
                                     <option value="2">X</option>
                                     <option value="3">X</option>

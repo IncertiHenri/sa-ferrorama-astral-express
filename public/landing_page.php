@@ -26,6 +26,8 @@ if (!isset($_SESSION['usuario'])) {
 
 <body id="body_tela_inicial">
 
+ <div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -33,9 +35,6 @@ if (!isset($_SESSION['usuario'])) {
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
         </div>
     </header>
-
-
-    <main id="main_tela_inicial">
 
         <div class="menu">
             <div class="conteiner_menu_logo">
@@ -87,9 +86,9 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </div>
 
+    <main>
 
         <div class="conteudo_principal">
-
 
             <div class="area_boas_vindas">
 
@@ -140,6 +139,8 @@ if (!isset($_SESSION['usuario'])) {
     </main>
 
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

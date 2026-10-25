@@ -23,32 +23,33 @@ if (!isset($_SESSION['usuario'])) {
 
 <body id="body_cadastro_relatorios">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-            </div>
-        </div>
-    </header>
-
-    <div class="menu">
-
-        <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
-
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+    <div class="conteudo">
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
+        </header>
 
-        <div id="botoes_menu">
+        <div class="menu">
+
+            <div class="conteiner_menu_logo">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                </div>
+            </div>
+
+            <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela Inicial
                 </button>
@@ -82,90 +83,93 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
             </div>
-    </div>
-
-    <main>
-        <div class="fundo_cadastros">
-            <div>
-                <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
-                <div class="borda_verde_flex">
-                    <div id="filtros_relatorios">
-                        <h1 class="titulo_relatorios">Filtros<img class="imagem_filtrar" src="../assets/img/filtro.png"
-                                alt="filtro"></h1>
-                    </div>
-                    <div>
-                        <form action="#" class="flex" id="formulario_visualizacao_relatorios">
-                            <div class="flex_column">
-                                <label for="data_inicio" class="texto_cadastros">Data início</label>
-                                <input type="date" name="data_inicio" class="campo_cadastros">
-                            </div>
-                            <div class="flex_column">
-                                <label for="data_fim" class="texto_cadastros">Data fim</label>
-                                <input type="date" name="data_fim" class="campo_cadastros">
-                            </div>
-                            <div class="flex_column">
-                                <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
-                                <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
-                                    <option value="1">Todos</option>
-                                    <option value="2">X</option>
-                                    <option value="3">X</option>
-                                    <option value="4">X</option>
-                                    <option value="5">X</option>
-                                </select>
-                            </div>
-                            <div class="flex_column">
-                                <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
-                                <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
-                                    <option value="1">Todos</option>
-                                    <option value="2">X</option>
-                                    <option value="3">X</option>
-                                    <option value="4">X</option>
-                                    <option value="5">X</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" id="botao_formulario_visualizar_relatorios">Filtrar</button>
-                        </form>
-                    </div>
-                </div>
-
-                <h1 class="titulo_relatorios">Últimos Relatórios</h1>
-
-
-                <div>
-                    <div class="borda_verde_flex">
-                        <div class="flex" id="ultimos_relatorios">
-                            <h1 class="texto_cadastros">Nome</h1>
-                            <h1 class="texto_cadastros">Data de Criação</h1>
-                            <h1 class="texto_cadastros">Tipo de relatório</h1>
-                            <h1 class="texto_cadastros">Ações</h1>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="borda_verde_flex">
-
-                        </div>
-                        <div class="borda_verde_flex">
-
-                        </div>
-                        <div class="borda_verde_flex">
-
-                        </div>
-                        <div class="borda_verde_flex">
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
         </div>
-    </main>
 
-    <script src="../scripts/script.js"></script>
+        <main>
+            <div class="fundo_cadastros">
+                <div id="relatorios">
+                    <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
+                    <div class="borda_verde_flex">
+                        <div id="filtros_relatorios">
+                            <h1 class="titulo_relatorios">Filtros</h1>
+                        </div>
+                        <div>
+                            <form action="#" class="flex" id="formulario_visualizacao_relatorios">
+                                <div class="flex_column">
+                                    <label for="data_inicio" class="label_form">Data início:</label>
+                                    <input type="date" name="data_inicio" class="input_visualizacao">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="data_fim" class="label_form">Data fim:</label>
+                                    <input type="date" name="data_fim" class="input_visualizacao">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="tipo_relatorio" class="label_form">Tipo de relatório:</label>
+                                    <select name="tipo_relatorio" id="texto_cadastros" class="input_visualizacao">
+                                        <option value="1">Todos</option>
+                                        <option value="2">X</option>
+                                        <option value="3">X</option>
+                                        <option value="4">X</option>
+                                        <option value="5">X</option>
+                                    </select>
+                                </div>
+                                <div class="flex_column">
+                                    <label for="tipo_falha" class="label_form">Tipo de falha:</label>
+                                    <select name="tipo_falha" id="tipo_falha" class="input_visualizacao">
+                                        <option value="1">Todos</option>
+                                        <option value="2">X</option>
+                                        <option value="3">X</option>
+                                        <option value="4">X</option>
+                                        <option value="5">X</option>
+                                    </select>
+                                </div>
+                                <div class="sem_flex" id="local_botao_relatorios">
+                                <button type="submit" id="filtrar_relatorios"><h2>Filtrar</h2></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
+                    <h1 class="titulo_relatorios">Últimos Relatórios</h1>
+
+                    <div class="borda_verde">
+
+                    <table>
+
+                    <div class="tabela">
+
+                        <tr>
+                            <div class="flex" id="ultimos_relatorios">
+                                <td>Nome</td>
+                                <td>Data de Criação</td>
+                                <td>Tipo de relatório</td>
+                                <td>Ações</td>
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="flex">
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+                            </div>
+                        </tr>
+
+
+
+                    </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="../scripts/script.js"></script>
+    </div>
 </body>
 
 </html>

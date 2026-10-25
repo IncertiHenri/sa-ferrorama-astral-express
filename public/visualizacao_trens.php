@@ -20,6 +20,9 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body id="visualizacao_trens">
+
+ <div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -81,28 +84,29 @@ if (!isset($_SESSION['usuario'])) {
             </div>
     </div>
 
-    <div class="fundo_cadastros">
+    <main>
 
+    <div class="fundo_cadastros">
         <div class="cadastros">
 
             <div class="borda_verde_flex">
                 <h2 id="titulo_tabela">Trens Cadastrados</h2>
             </div>
 
-            <div class="tabela">
-
                 <div class="borda_verde">
+
+                <div class="tabela">
 
                     <table>
 
                         <tr>
-                            <td>ID</td>
+                            <td>ID do trem</td>
                             <td>Funcionário</td>
                             <td>Nome do Trem</td>
                             <td>Modelo</td>
                             <td>Capacidade</td>
-                            <td>Status</td>
-                            <?php if ($_SESSION['tipo'] === 'admin') { echo "<td>Ação</td>"; } ?>
+                            <td>Status</td> 
+                            <?php if ($_SESSION['tipo'] === 'admin') { echo "<td colspan='8'>Ação</td>"; } ?>
                         </tr>
 
                         <?php
@@ -112,7 +116,7 @@ if (!isset($_SESSION['usuario'])) {
                         $trens = $conn->query($sql);
 
                         while ($resultado = mysqli_fetch_assoc($trens)) {
-                            echo "<tr>";
+                            echo "<tr class='campos_informacoes'>";
                             echo "<td>" . $resultado["id_trem"] . "</td>";
                             echo "<td>" . $resultado["usuario"] . "</td>";
                             echo "<td>" . $resultado["nome_trem"] . "</td>";
@@ -145,9 +149,11 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </div>
 
-
+    </main>
 
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

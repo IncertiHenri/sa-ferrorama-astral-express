@@ -24,21 +24,19 @@ if (!isset($_SESSION['usuario'])) {
     <title>Tela Inicial</title>
 </head>
 
-<body id="body_tela_inicial">
+<body>
+
+ <div class="conteudo">
 
     <header>
         <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <p class="clima">Joinville | <span id="temperatura">Carregando...</span></p>
+            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>! Joinville | <p class="acesso_admin"> <span id="temperatura">Carregando...</span></p></p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <div class="sem_flex">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
             </div>
         </div>
     </header>
-
-
-    <main id="main_tela_inicial">
 
         <div class="menu">
             <div class="conteiner_menu_logo">
@@ -90,8 +88,9 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </div>
 
+        <main>
 
-        <div class="conteudo_principal">
+        <div class="conteudo_tela_inicial">
 
             <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
 
@@ -109,9 +108,13 @@ if (!isset($_SESSION['usuario'])) {
 
             </div>
 
+        </div>
+
     </main>
 
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

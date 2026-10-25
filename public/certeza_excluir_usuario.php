@@ -21,6 +21,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 <body id="body_tela_inicial">
 
+    <div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -30,9 +32,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
         </div>
     </header>
-
-
-    <main id="main_tela_inicial">
 
         <div class="menu">
 
@@ -85,6 +84,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
         </div>
 
+        <main>
+
         <?php
 
         $id = $_GET["id"];
@@ -107,6 +108,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 
         <script src="../scripts/script.js"></script>
+
+        </div>
 
 </body>
 

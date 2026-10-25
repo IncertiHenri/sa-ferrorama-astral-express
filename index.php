@@ -13,8 +13,9 @@ session_start();
     <title>Login</title>
 </head>
 
-<body id="body_login">
+<body>
 
+<div id="corpo_login">
     <div class="login_esquerdo">
         <div class="titulo_site">
             <img src="assets/img/trem.PNG" alt="trem" class="trem">
@@ -50,6 +51,9 @@ session_start();
     </div>
 
     <script src="scripts/script.js"></script>
+    
+    </div>
+
 </body>
 
 </html>

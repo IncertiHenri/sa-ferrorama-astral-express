@@ -25,99 +25,148 @@ $id = $_GET["id"];
 
 <body id="usuarios_cadastrados">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+    <div class="conteudo">
+
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
+    <div class="menu">
 
-    <main id="main_visualizacao_sensores">
+        <div class="conteiner_menu_logo">
+            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-        <button class="botao_superior" id="botao_voltar" onclick="visualizacaoTrens()">
-            <img src="../assets/img/sair.png" alt="voltar">
-            Voltar
-        </button>
-
-        <div class="fundo_cadastros">
-
-            <div class="cadastros">
-
-                <div class="borda_verde_flex">
-                    <h1 class="texto_cadastro">Atualizar trens</h1>
+            <div class="inline_block">
+                <div class="inline_flex">
+                    <h1 class="titulo_menu">ASTRAL</h1>
+                    <h4 class="titulo2_menu">EXPRESS</h4>
                 </div>
 
-                <div class="tabela">
+                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+            </div>
+        </div>
 
-                    <div class="borda_verde">
+        <div id="botoes_menu">
+                <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                    Tela Inicial
+                </button>
 
-                        <form action="editar_trens.php?id=<?php echo $id ?>" method="POST"
-                            id="formulario_editar_trem">
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
+                </button>
 
-                            <div class="flex_column">
-                        <div class="flex" id="campos_cadastro_trens">
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    Monitoramento em Tempo Real
+                </button>
 
-                            <div class="flex_column">
-                                <label for="funcionario" class="texto_cadastros">Funcionário</label>
-                                <select name="funcionario" class="campo_cadastros" required>
-                                    <option value="">Selecione</option>
-                                    <?php 
-                                    
-                                    $sql = "SELECT id_usuario, usuario FROM usuario";
+                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+                    Visualização de Sensores
+                </button>
 
-                                    $busca = $conn->query($sql);
+                <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+                    Visualização de Trens
+                </button>
 
-                                    while($usuario = mysqli_fetch_assoc($busca)){
-                                        echo "<option value='" . $usuario["id_usuario"] . "'>" . $usuario["usuario"] . "</option>";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
+                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    Visualização de Rotas
+                </button>
 
-                            <div class="flex_column">
-                                <label for="nome_trem" class="texto_cadastros">Nome do Trem</label>
-                                <input type="text" name="nome_trem" class="campo_cadastros" required>
-                            </div>
+                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                    Visualização de Relatórios
+                </button>
 
-                            <div class="flex_column">
-                                <label for="modelo" class="texto_cadastros">Modelo</label>
-                                <input type="text" name="modelo" class="campo_cadastros" required>
-                            </div>
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                    Usuários Cadastrados
+                </button>
 
-                            <div class="flex_column">
-                                <label for="capacidade" class="texto_cadastros">Capacidade</label>
-                                <input type="number" name="capacidade" class="campo_cadastros" required>
-                            </div>
+            </div>
+    </div>
 
-                            <div class="flex_column">
-                                <label for="status" class="texto_cadastros">Status do trem</label>
-                                <select name="status" class="campo_cadastros" required>
-                                    <option value="">Selecione</option>
-                                    <option value="ativo">Ativo</option>
-                                    <option value="inativo">Inativo</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" id="botao_formulario_cadastro_trens">Atualizar</button>
+        <main>
 
-                            </div>
-                        </form>
+            <button id="botao_voltar" onclick="visualizacaoTrens()">
+                Voltar
+            </button>
 
+            <div class="fundo_form_cadastros">
+                <div class="flex_column">
+                    <div class="borda_verde_flex">
+                        <h1 class="titulo_cadastro_form">Atualizar trem</h1>
                     </div>
+                    <div class="inserir_dados_cadastro">
+
+                        <form action="editar_trens.php?id=<?php echo $id ?>" id="formulario_cadastro_trens"
+                            method="POST">
+
+                            <div class="flex_column">
+                                <div class="flex_column">
+                                    <label for="nome_trem" class="label_form">Nome:</label>
+                                    <input type="text" name="nome_trem" class="input_form" required>
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="modelo" class="label_form">Modelo:</label>
+                                    <input type="text" name="modelo" class="input_form" required>
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="capacidade" class="label_form">Capacidade:</label>
+                                    <input type="number" name="capacidade" class="input_form" required>
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="status" class="label_form">Status</label>
+                                    <select name="status" class="input_form" required>
+                                        <option value="">Selecione</option>
+                                        <option value="ativo">Ativo</option>
+                                        <option value="inativo">Inativo</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="funcionario" class="label_form_cadastro">Funcionário</label>
+                                    <select name="funcionario" class="input_form" required>
+                                        <option value="">Selecione</option>
+                                        <?php
+
+                                        $sql = "SELECT id_usuario, usuario FROM usuario";
+
+                                        $busca = $conn->query($sql);
+
+                                        while ($usuario = mysqli_fetch_assoc($busca)) {
+                                            echo "<option value='" . $usuario["id_usuario"] . "'>" . $usuario["usuario"] . "</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div class="borda_verde_flex">
+                        <button type="submit" class="botao_form_cadastro">Atualizar</button>
+                    </div>
+
+
+                    </form>
+
+
                 </div>
-
-
             </div>
-        </div>
-
-    </main>
 
 
-    <script src="../scripts/script.js"></script>
+
+        </main>
+
+
+        <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

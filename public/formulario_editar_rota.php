@@ -38,6 +38,8 @@ if ($resultado_usuario === false) {
 
 <body id="usuarios_cadastrados">
 
+ <div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -49,7 +51,7 @@ if ($resultado_usuario === false) {
     </header>
 
 
-    <main id="main_visualizacao_sensores">
+    
 
         <div class="menu">
 
@@ -111,88 +113,91 @@ if ($resultado_usuario === false) {
             </div>
         </div>
 
-        <button class="botao_superior" id="botao_voltar" onclick="visualizacaoRotas()">
-            <img src="../assets/img/sair.png" alt="voltar">
+        <main>
+
+        <button id="botao_voltar" onclick="visualizacaoRotas()">
             Voltar
         </button>
 
-        <div class="fundo_cadastros">
 
-            <div class="cadastros">
+        <div class="fundo_form_cadastros">
 
-                <div class="borda_verde_flex">
-                    <h1 class="texto_cadastro">Atualizar Rota</h1>
-                </div>
+                <div class="flex_column">
 
-                <div class="tabela">
-
-                    <div class="borda_verde">
-
-                        <form action="editar_rota.php?id=<?php echo $id ?>" method="POST"
-                            id="formulario_editar_rota">
-
-                            <div class="flex_column">
-                                <div class="flex" id="campos_editar_rota">
-                                    <div class="flex_column">
-                                        <label for="hora" class="texto_cadastros">Data de Criação</label>
-                                        <input type="date" name="hora" class="campo_cadastros" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="origem" class="texto_cadastros">Origem</label>
-                                        <input type="text" name="origem" class="campo_cadastros" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="destino" class="texto_cadastros">Destino</label>
-                                        <input type="text" name="destino" class="campo_cadastros" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="tempo" class="texto_cadastros">Tempo</label>
-                                        <input type="time" name="tempo" class="campo_cadastros" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
-                                        <select name="trem_associado" class="campo_cadastros" required>
-                                        <option value="">Selecione um Trem</option>
-                                        <?php
-                                        while ($trem = mysqli_fetch_assoc($resultado_trem)) {
-                                            echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
-                                        <select name="usuario_associado" class="campo_cadastros">
-                                            <option value="">Selecione um Usuário</option>
-                                            <?php
-                                            while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
-                                            echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-
-                                </div>
-                                <button type="submit" class="botao_formulario_cadastro_sensor">Atualizar</button>
-                            </div>
-                        </form>
-
+                    <div class="borda_verde_flex">
+                        <h1 class="titulo_cadastro_form">Atualizar Rota</h1>
                     </div>
-                </div>
 
+                    <div class="inserir_dados_cadastro">
+
+                            <form action="editar_rota.php?id=<?php echo $id ?>" method="POST" id="form_cadastro">
+                                <div class="flex_column">
+
+                                    <div class="flex_column">
+                                        <div class="flex_column" id="campos_cadastro_sensores">
+                                            <div class="flex_column">
+                                                <label for="hora" class="label_form">Data de Criação:</label>
+                                                <input type="date" name="hora" class="input_form" required>
+                                            </div>
+
+                                            <div class="flex_column">
+                                                <label for="origem" class="label_form">Origem:</label>
+                                                <input type="text" name="origem" class="input_form" required>
+                                            </div>
+
+                                            <div class="flex_column">
+                                                <label for="destino" class="label_form">Destino:</label>
+                                                <input type="text" name="destino" class="input_form" required>
+                                            </div>
+                                            <div class="flex_column">
+                                                <label for="tempo" class="label_form">Tempo:</label>
+                                                <input type="time" name="tempo" class="input_form" required>
+                                            </div>
+                                            <div class="flex_column">
+                                                <label for="trem_associado" class="label_form">Trem
+                                                    Associado:</label>
+                                                <select name="trem_associado" class="input_form" required>
+                                                    <option value="">Selecione um Trem</option>
+                                                    <?php
+                                                    while ($trem = mysqli_fetch_assoc($resultado_trem)) {
+                                                        echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                            <div class="flex_column">
+                                                <label for="usuario_associado" class="label_form">Usuário
+                                                    Associado:</label>
+                                                <select name="usuario_associado" class="input_form" required>
+                                                    <option value="">Selecione um Usuário</option>
+                                                    <?php
+                                                    while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
+                                                        echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                    
+            </div>
+                    <div class="borda_verde_flex">
+                <button type="submit" class="botao_form_cadastro">Atualizar</button>
+            </div>
+                </form>
 
             </div>
-        </div>
+            </div>
 
     </main>
 
 
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

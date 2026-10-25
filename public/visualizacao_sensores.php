@@ -22,6 +22,8 @@ if (!isset($_SESSION['usuario'])) {
 
 <body id="visualizacao_sensores">
 
+ <div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -31,8 +33,6 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </div>
     </header>
-
-    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -85,6 +85,8 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </div>
 
+        <main>
+
         <div class="fundo_cadastros">
 
             <div class="cadastros">
@@ -126,6 +128,8 @@ if (!isset($_SESSION['usuario'])) {
 
     <script src="../scripts/script.js"></script>
 
+    </div>
+    
 </body>
 
 </html>

@@ -23,6 +23,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 <body id="usuarios_cadastrados">
 
+<div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -32,9 +34,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
         </div>
     </header>
-
-
-    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -87,50 +86,49 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
         </div>
 
-        <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
-            <img src="../assets/img/sair.png" alt="voltar">
-            Voltar
+        <main>
+
+        <button id="botao_voltar" onclick="usuariosCadastrados()">
+            Retornar
         </button>
 
-        <div class="fundo_cadastros">
+        <div class="fundo_form_cadastros">
 
-            <div class="cadastros">
+            <div class="flex_column">
 
                 <div class="borda_verde_flex">
-                    <h1 class="texto_cadastro">Cadastro de Usuários</h1>
+                    <h1 class="titulo_cadastro_form">Cadastro de Usuários</h1>
                 </div>
 
-                <div class="tabela">
+                <div class="inserir_dados_cadastro">
 
-                    <div class="borda_verde">
-
-                        <form action="cadastrar_usuarios.php" method="POST" id="formulario_cadastro_usuarios">
+                        <form action="cadastrar_usuarios.php" method="POST" id="form_cadastro">
 
                             <div class="flex_column">
-                                <div class="flex" id="campos_cadastro_usuarios">
+                                <div class="flex_column">
                                     <div class="flex_column">
-                                        <label for="nome" class="texto_cadastros">Nome</label>
-                                        <input type="text" name="nome" class="campo_cadastros">
+                                        <label for="nome" class="label_form">Nome:</label>
+                                        <input type="text" name="nome" class="input_form">
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="usuario" class="texto_cadastros">Usuário</label>
-                                        <input type="text" name="usuario" class="campo_cadastros">
+                                        <label for="usuario" class="label_form">Usuário:</label>
+                                        <input type="text" name="usuario" class="input_form">
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="email" class="texto_cadastros">E-mail</label>
-                                        <input type="email" name="email" class="campo_cadastros">
+                                        <label for="email" class="label_form">E-mail:</label>
+                                        <input type="email" name="email" class="input_form">
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="senha" class="texto_cadastros">Senha</label>
-                                        <input type="password" name="senha" class="campo_cadastros">
+                                        <label for="senha" class="label_form">Senha:</label>
+                                        <input type="password" name="senha" class="input_form">
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
-                                        <select name="perfil" id="perfil" class="campo_cadastros">
+                                        <label for="tipo_perfil" class="label_form">Tipo de cargo:</label>
+                                        <select name="perfil" id="perfil" class="input_form">
                                             <option value="funcionario">Funcionário</option>
                                             <option value="admin">Administrador</option>
                                         </select>
@@ -138,14 +136,16 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                                     </div>
 
                                 </div>
-                                <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
 
-                            </div>
+                                </div>
+
+                                </div>
+                                <div class="borda_verde_flex">
+                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+            </div>
+
+                            
                         </form>
-
-                    </div>
-                </div>
-
 
             </div>
         </div>
@@ -155,6 +155,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
     <script src="../scripts/script.js"></script>
 
+    </div>
 </body>
 
 </html>

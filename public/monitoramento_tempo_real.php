@@ -21,9 +21,7 @@ if (!isset($_SESSION['usuario'])) {
     <title>Monitoramento em Tempo Real</title>
 </head>
 
-<body id="body_monitoramento">
-
-    <header>
+<header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
@@ -33,23 +31,20 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </header>
 
-    <main id="main_monitoramento">
-
         <div class="menu">
+            <div class="conteiner_menu_logo">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-        <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
-        
+
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela Inicial
@@ -84,102 +79,11 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
             </div>
-        </div>
-
-        <div id="tabelas_monitoramento">
-
-            <div class="fundo_tabela_monitoramento">
-
-                <div class="tabela_monitoramento">
-
-                    <table>
-
-                        <tr>
-                            <th>ID</th>
-                            <th>Velocidade</th>
-                            <th>Status</th>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_1">01</td>
-                            <td>100 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_2">02</td>
-                            <td>140 Km/h</td>
-                            <td>Alerta</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_3">03</td>
-                            <td>80 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_4">04</td>
-                            <td>80 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_5">05</td>
-                            <td>100 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_6">06</td>
-                            <td>100 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_7">07</td>
-                            <td>80 km/h</td>
-                            <td>Falha</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_8">08</td>
-                            <td>120 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_9">09</td>
-                            <td>35 km/h</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td id="linha_10">10</td>
-                            <td>120 km/h</td>
-                            <td>Alerta</td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-            <div class="fundo_tabela_mapa">
-
-                <div class="mapa_monitoramento">
-                    <img id="mapa_trilho" src="../assets/img/mapa_trilho.png" alt="mapa_de_monitoramento">
-                </div>
-
-            </div>
 
         </div>
 
-    </main>
-
-    <script src="../scripts/script.js"></script>
-
+        <script src="../scripts/script.js"></script>
+    
 </body>
 
 </html>

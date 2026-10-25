@@ -22,6 +22,8 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="usuarios_cadastrados">
 
+<div class="conteudo">
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -31,9 +33,6 @@ $resultado = mysqli_query($conn, $sql);
             </div>
         </div>
     </header>
-
-
-    <main id="main_monitoramento">
 
         <div class="menu">
 
@@ -86,6 +85,8 @@ $resultado = mysqli_query($conn, $sql);
             </div>
         </div>
 
+        <main>
+
     <div class="fundo_cadastros">
 
         <div class="cadastros">
@@ -93,25 +94,28 @@ $resultado = mysqli_query($conn, $sql);
             <div class="borda_verde_flex">
                 <h2 id="titulo_tabela">Usuários Cadastrados</h2>
             </div>
-
-            <div class="tabela">
-
+            
                 <div class="borda_verde">
 
+                    <div class="tabela">
+                
                     <table>
 
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Usuário</th>
-                            <th>E-mail</th>
-                            <th>Cargo</th>
-
+                        <tr class="titulos_tabelas">
+                            <td>Matrícula</td>
+                            <td>Nome</td>
+                            <td>Usuário</td>
+                            <td>E-mail</td>
+                            <td>Cargo</td>
+                            <?php if ($_SESSION['tipo'] === 'admin') { echo "<td colspan='7'>Ações</td>"; } ?>
                         </tr>
+                        
 
+                        
                         <?php
 
                         while ($usuario = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>";
+                            echo "<tr class='campos_informacoes'>";
                             echo "<td>" . $usuario["id_usuario"] . "</td>";
                             echo "<td>" . $usuario["nome"] . "</td>";
                             echo "<td>" . $usuario["usuario"] . "</td>";
@@ -126,6 +130,8 @@ $resultado = mysqli_query($conn, $sql);
                                 echo "</tr>";
                         }
                         ?>
+                        
+                        </div>
                    </table>
 
                 </div>
@@ -147,6 +153,8 @@ $resultado = mysqli_query($conn, $sql);
 
 
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

@@ -22,6 +22,10 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 </head>
 
 <body id="cadastro_sensores">
+
+<div class="conteudo">
+
+
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
@@ -83,42 +87,40 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             </div>
     </div>
 
-    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoTrens()">
-        <img src="../assets/img/sair.png" alt="voltar">
-        Voltar
+    <button id="botao_voltar" onclick="visualizacaoTrens()">
+        Retornar
     </button>
 
-    <main id="main_cadastro_trens">
+    <main>
 
-        <div class="campo_verde_medio_trens">
-            <div class="campo_borda_verde">
-                <h1 class="titulo_cadastro_trens">Cadastro de Novos Trens</h1>
+        <div class="fundo_form_cadastros">
+            <div class="flex_column">
+                <div class="borda_verde_flex">
+                <h1 class="titulo_cadastro_form">Cadastro de trens</h1>
             </div>
-            <div class="campo_borda_verde" id="justify_align">
+            <div class="inserir_dados_cadastro">
 
                 <form action="cadastrar_trem.php" id="formulario_cadastro_trens" method="POST">
 
                     <div class="flex_column">
-                        <div class="flex" id="campos_cadastro_trens">
-
                             <div class="flex_column">
-                                <label for="nome_trem" class="texto_cadastros">Nome do Trem</label>
-                                <input type="text" name="nome_trem" class="campo_cadastros" required>
+                                <label for="nome_trem" class="label_form">Nome:</label>
+                                <input type="text" name="nome_trem" class="input_form" required>
                             </div>
 
                             <div class="flex_column">
-                                <label for="modelo" class="texto_cadastros">Modelo</label>
-                                <input type="text" name="modelo" class="campo_cadastros" required>
+                                <label for="modelo" class="label_form">Modelo:</label>
+                                <input type="text" name="modelo" class="input_form" required>
                             </div>
 
                             <div class="flex_column">
-                                <label for="capacidade" class="texto_cadastros">Capacidade</label>
-                                <input type="number" name="capacidade" class="campo_cadastros" required>
+                                <label for="capacidade" class="label_form">Capacidade:</label>
+                                <input type="number" name="capacidade" class="input_form" required>
                             </div>
 
                             <div class="flex_column">
-                                <label for="status" class="texto_cadastros">Status do trem</label>
-                                <select name="status" class="campo_cadastros" required>
+                                <label for="status" class="label_form">Status</label>
+                                <select name="status" class="input_form" required>
                                     <option value="">Selecione</option>
                                     <option value="ativo">Ativo</option>
                                     <option value="inativo">Inativo</option>
@@ -126,8 +128,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                             </div>
 
                             <div class="flex_column">
-                                <label for="funcionario" class="texto_cadastros">Funcionário</label>
-                                <select name="funcionario" class="campo_cadastros" required>
+                                <label for="funcionario" class="label_form_cadastro">Funcionário</label>
+                                <select name="funcionario" class="input_form" required>
                                     <option value="">Selecione</option>
                                     <?php 
                                     
@@ -141,27 +143,24 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                                     ?>
                                 </select>
                             </div>
+                        
+                            </div>
+                            </div>
+                            <div class="borda_verde_flex">
+                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+            </div>
 
-                        </div>
-                        <?php
-
-            if ($_SESSION['tipo'] === 'admin') {
-
-                $cod = "<button type='submit' id='botao_formulario_cadastro_trens'>Cadastrar</button>";
-
-                echo $cod;
-            }
-
-            ?>
-
-                    </div>
+                    
                 </form>
 
-            </div>
+            
+        </div>
         </div>
         </div>
     </main>
     <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 
