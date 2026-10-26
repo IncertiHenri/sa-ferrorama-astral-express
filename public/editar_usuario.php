@@ -49,7 +49,7 @@ $sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ?, perfil =
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("sssssisssss", $nome, $usuario, $senha, $email, $perfil, $id, $cep, $logradouro, $bairro, $cidade, $uf);
+$stmt->bind_param("ssssssssssi", $nome, $usuario, $senha, $email, $perfil, $cep, $logradouro, $bairro, $cidade, $uf, $id);
 
 $stmt->execute();
 

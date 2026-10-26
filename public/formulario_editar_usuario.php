@@ -99,12 +99,12 @@ $id = $_GET["id"];
                 <div class="flex_column">
 
                     <div class="borda_verde_flex">
-                        <h1 class="titulo_cadastro_form">Cadastro de Usuários</h1>
+                        <h1 class="titulo_cadastro_form">Edição de Usuários</h1>
                     </div>
 
                     <div class="inserir_dados_cadastro">
 
-                        <form action="cadastrar_usuarios.php" method="POST" id="form_cadastro">
+                        <form action="editar_usuario.php?id=<?php echo $id; ?>" method="POST" id="form_cadastro">
 
                             <div class="flex_column">
                                 <div class="flex_column">
@@ -166,7 +166,7 @@ $id = $_GET["id"];
                             </div>
                    
                             <div class="borda_verde_flex">
-                                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                                <button type="submit" class="botao_form_cadastro">Editar</button>
                             </div>
 
                         </form>
