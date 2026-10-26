@@ -128,7 +128,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                                 </div>
 
                                 <div class="flex_column">
-                                    <label for="funcionario" class="label_form_cadastro">Funcionário</label>
+                                    <label for="funcionario" class="label_form">Funcionário</label>
                                     <select name="funcionario" class="input_form" required>
                                         <option value="">Selecione</option>
                                         <?php

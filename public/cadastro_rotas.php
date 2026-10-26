@@ -120,7 +120,7 @@ if ($resultado_usuario === false) {
 
                     <div class="inserir_dados_cadastro">
 
-                        <form action="cadastra_rota.php" method="POST" id="form_cadastro">
+                        <form action="cadastrar_rota.php" method="POST" id="form_cadastro">
                             <div class="flex_column">
 
                                 <div class="flex_column">
