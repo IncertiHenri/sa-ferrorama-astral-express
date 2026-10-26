@@ -45,9 +45,10 @@ session_start();
                 </form>
 
                 <div>
-                    <button id="botao_sensor_novo" onclick="index()">
-                        Cadastrar Usuário
-                    </button>
+                <button id="botao_login" onclick="window.location.href='../index.php'">
+                    Voltar
+                </button>
+
                 </div>
 
             </div>
