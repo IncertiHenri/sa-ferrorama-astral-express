@@ -14,6 +14,11 @@ $usuario = $_POST["usuario"];
 $senha = $_POST["senha"];
 $email = $_POST["email"];
 $perfil = $_POST["perfil"];
+$cep = $_POST["cep"];
+$logradouro = $_POST["logradouro"];
+$bairro = $_POST["bairro"];
+$cidade = $_POST["cidade"];
+$uf = $_POST["uf"];
 $id = $_GET["id"];
 
 if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L}]+$/u', $nome)) {
@@ -40,11 +45,11 @@ if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L}]+$/u', $nome)) {
 
 $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ?, perfil = ? WHERE id_usuario = ?";
+$sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ?, perfil = ?, cep = ?, logradouro = ?, bairro = ?, cidade = ?, uf = ? WHERE id_usuario = ?";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("sssssi", $nome, $usuario, $senha, $email, $perfil, $id);
+$stmt->bind_param("sssssisssss", $nome, $usuario, $senha, $email, $perfil, $id, $cep, $logradouro, $bairro, $cidade, $uf);
 
 $stmt->execute();
 

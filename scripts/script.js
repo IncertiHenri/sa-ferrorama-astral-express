@@ -61,7 +61,7 @@ function landingPage() {
     window.location.href = "../public/landing_page.php";
 }
 
-document.getElementById('informacoes').style.display = 'none';
+document.getElementById('informacoes');
 
 async function consultarCEP() {
     const cep = document.getElementById('cep').value;

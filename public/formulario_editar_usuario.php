@@ -134,20 +134,43 @@ $id = $_GET["id"];
                                             <option value="funcionario">Funcionário</option>
                                             <option value="admin">Administrador</option>
                                         </select>
+                                    </div>
 
+                                    <div class="flex_column">
+                                        <label for="cep" class="label_form">CEP:</label>
+                                        <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="logradouro" class="label_form">Logradouro:</label>
+                                        <input type="text" id="logradouro" name="logradouro" class="input_form">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="bairro" class="label_form">Bairro:</label>
+                                        <input type="text" id="bairro" name="bairro" class="input_form">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="cidade" class="label_form">Cidade:</label>
+                                        <input type="text" id="cidade" name="cidade" class="input_form">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="uf" class="label_form">UF:</label>
+                                        <input type="text" id="uf" name="uf" class="input_form">
                                     </div>
 
                                 </div>
 
                             </div>
+                   
+                            <div class="borda_verde_flex">
+                                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                            </div>
 
-                    </div>
-                    <div class="borda_verde_flex">
-                        <button type="submit" class="botao_form_cadastro">Cadastrar</button>
-                    </div>
-
-
-                    </form>
+                        </form>
+                    </div> 
 
                 </div>
             </div>

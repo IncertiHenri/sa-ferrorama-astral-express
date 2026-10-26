@@ -9,7 +9,12 @@ CREATE TABLE
         usuario VARCHAR(45) UNIQUE NOT NULL,
         senha VARCHAR(255) NOT NULL,
         email VARCHAR(100) NOT NULL,
-        perfil ENUM ('admin', 'funcionario') DEFAULT 'funcionario'
+        perfil ENUM ('admin', 'funcionario') DEFAULT 'funcionario',
+        cep VARCHAR(9),
+        logradouro VARCHAR(100),
+        bairro VARCHAR(100),
+        cidade VARCHAR(100),
+        uf VARCHAR(2)
     );
 
 CREATE TABLE
