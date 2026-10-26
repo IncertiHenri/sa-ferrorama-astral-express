@@ -30,13 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         } else {
             echo "<script>alert('E-mail ou senha incorretos, tente novamente!');
-        window.location.href = '../index.php';
+        window.location.href = 'tela_login.php';
         </script>";
         }
         exit();
     } else {
         echo "<script>alert('E-mail ou senha incorretos, tente novamente!');
-        window.location.href = '../index.php';
+        window.location.href = 'tela_login.php';
         </script>";
     }
     exit();
