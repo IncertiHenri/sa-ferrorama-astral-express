@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
     <title>Login</title>
 </head>
 
@@ -18,7 +18,7 @@ session_start();
     <div id="corpo_login">
         <div class="login_esquerdo">
             <div class="titulo_site">
-                <img src="assets/img/trem.PNG" alt="trem" class="trem">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem">
                 <div class="inline_block">
                     <div class="inline_flex">
                         <h1 class="titulo_login">ASTRAL</h1>
@@ -47,7 +47,7 @@ session_start();
         </div>
 
         <div id="imagem_inicial">
-            <img id="imagem_estacao" src="assets/img/estacao_2.png" alt="estacao">
+            <img id="imagem_estacao" src="../assets/img/estacao_2.png" alt="estacao">
         </div>
 
         <script src="scripts/script.js"></script>
