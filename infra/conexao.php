@@ -4,7 +4,7 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $database = "sistema_ferroviario_astral_express";
-$port = 6608;
+$port = 3303;
 
 $conn = new mysqli($host, $user, $pass, $database, $port);
 

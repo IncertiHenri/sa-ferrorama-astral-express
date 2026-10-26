@@ -42,6 +42,10 @@ function sair() {
     window.location.href = "logout.php";
 }
 
+function index() {
+    window.location.href = "../index.php";
+}
+
 function cadastroTrens() {
     window.location.href = "../public/cadastro_trens.php";
 }

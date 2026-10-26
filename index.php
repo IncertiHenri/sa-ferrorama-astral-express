@@ -28,26 +28,17 @@ session_start();
                 </div>
             </div>
 
-            <div class="campo_login">
-
-                <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
-
-                <form id="login" action="public/login.php" method="POST">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name='email'>
-
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name='senha'>
-
-
-                    <button type="submit" id="botao_login">Entrar</button>
-
-                </form>
+            <div class="titulo_login ">
+                <h3> O sistema de monitoramento ferroviário do futuro. </h3>
+            </div>
+            <div class="descricao">
+                <h3> Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados ferroviários <br> em informações claras para uma operação mais eficiente e confiável. </h3>
+            </div>
+            <div>
+            <button id="botao_login" onclick="window.location.href='public/tela_login.php'">Acesar Login</button>
             </div>
         </div>
 
-        <div id="imagem_inicial">
-            <img id="imagem_estacao" src="assets/img/estacao_2.png" alt="estacao">
         </div>
 
         <script src="scripts/script.js"></script>
