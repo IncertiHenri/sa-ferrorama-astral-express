@@ -31,13 +31,11 @@ session_start();
             <div class="titulo_login ">
                 <h3> O sistema de monitoramento ferroviário do futuro. </h3>
             </div>
-            <div class="subtitulo_login">
+            <div class="descricao">
                 <h3> Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados ferroviários <br> em informações claras para uma operação mais eficiente e confiável. </h3>
             </div>
             <div>
             <button id="botao_login" onclick="window.location.href='public/tela_login.php'">Acesar Login -></button>
-
-                </form>
             </div>
         </div>
 

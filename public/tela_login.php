@@ -32,7 +32,7 @@ session_start();
 
                 <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
 
-                <form id="login" action="public/login.php" method="POST">
+                <form id="login" action="login.php" method="POST">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name='email'>
 
@@ -43,6 +43,13 @@ session_start();
                     <button type="submit" id="botao_login">Entrar</button>
 
                 </form>
+
+                <div>
+                    <button id="botao_sensor_novo" onclick="index()">
+                        Cadastrar Usuário
+                    </button>
+                </div>
+
             </div>
         </div>
 
@@ -50,7 +57,7 @@ session_start();
             <img id="imagem_estacao" src="../assets/img/estacao_2.png" alt="estacao">
         </div>
 
-        <script src="scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
 
     </div>
 
