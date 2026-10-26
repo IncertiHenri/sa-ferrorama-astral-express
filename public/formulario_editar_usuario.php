@@ -88,11 +88,11 @@ $id = $_GET["id"];
             </div>
         </div>
 
-        <main>
-
             <button id="botao_voltar" onclick="usuariosCadastrados()">
                 Retornar
             </button>
+
+        <main>
 
             <div class="fundo_form_cadastros">
 
@@ -101,77 +101,73 @@ $id = $_GET["id"];
                     <div class="borda_verde_flex">
                         <h1 class="titulo_cadastro_form">Edição de Usuários</h1>
                     </div>
-
-                    <div class="inserir_dados_cadastro">
-
-                        <form action="editar_usuario.php?id=<?php echo $id; ?>" method="POST" id="form_cadastro">
-
-                            <div class="flex_column">
+                    
+                        <div class="inserir_dados_cadastro">
+                            <form action="editar_usuario.php?id=<?php echo $id; ?>" method="POST" id="form_cadastro">
                                 <div class="flex_column">
                                     <div class="flex_column">
-                                        <label for="nome" class="label_form">Nome:</label>
-                                        <input type="text" name="nome" class="input_form">
-                                    </div>
+                                        <div class="flex_column" id="campos_cadastro_sensores">
+                                            <div class="flex_column">
+                                                <label for="nome" class="label_form">Nome:</label>
+                                                <input type="text" name="nome" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="usuario" class="label_form">Usuário:</label>
-                                        <input type="text" name="usuario" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="usuario" class="label_form">Usuário:</label>
+                                                <input type="text" name="usuario" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="email" class="label_form">E-mail:</label>
-                                        <input type="email" name="email" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="email" class="label_form">E-mail:</label>
+                                                <input type="email" name="email" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="senha" class="label_form">Senha:</label>
-                                        <input type="password" name="senha" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="senha" class="label_form">Senha:</label>
+                                                <input type="password" name="senha" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="tipo_perfil" class="label_form">Tipo de cargo:</label>
-                                        <select name="perfil" id="perfil" class="input_form">
-                                            <option value="funcionario">Funcionário</option>
-                                            <option value="admin">Administrador</option>
-                                        </select>
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="tipo_perfil" class="label_form">Tipo de cargo:</label>
+                                                <select name="perfil" id="perfil" class="input_form">
+                                                    <option value="funcionario">Funcionário</option>
+                                                    <option value="admin">Administrador</option>
+                                                </select>
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="cep" class="label_form">CEP:</label>
-                                        <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="cep" class="label_form">CEP:</label>
+                                                <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="logradouro" class="label_form">Logradouro:</label>
-                                        <input type="text" id="logradouro" name="logradouro" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="logradouro" class="label_form">Logradouro:</label>
+                                                <input type="text" id="logradouro" name="logradouro" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="bairro" class="label_form">Bairro:</label>
-                                        <input type="text" id="bairro" name="bairro" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="bairro" class="label_form">Bairro:</label>
+                                                <input type="text" id="bairro" name="bairro" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="cidade" class="label_form">Cidade:</label>
-                                        <input type="text" id="cidade" name="cidade" class="input_form">
-                                    </div>
+                                            <div class="flex_column">
+                                                <label for="cidade" class="label_form">Cidade:</label>
+                                                <input type="text" id="cidade" name="cidade" class="input_form">
+                                            </div>
 
-                                    <div class="flex_column">
-                                        <label for="uf" class="label_form">UF:</label>
-                                        <input type="text" id="uf" name="uf" class="input_form">
+                                            <div class="flex_column">
+                                                <label for="uf" class="label_form">UF:</label>
+                                                <input type="text" id="uf" name="uf" class="input_form">
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </div>
-
                             </div>
-                   
-                            <div class="borda_verde_flex">
-                                <button type="submit" class="botao_form_cadastro">Editar</button>
-                            </div>
-
+                                <div class="borda_verde_flex">
+                                    <button type="submit" class="botao_form_cadastro">Editar</button>
+                                </div>
                         </form>
-                    </div> 
-
+                    
                 </div>
             </div>
 

@@ -171,14 +171,11 @@ if ($resultado_usuario === false) {
                                     </div>
                                 </div>
                             </div>
-
-
-                    </div>
-                    <div class="borda_verde_flex">
-                        <button type="submit" class="botao_form_cadastro">Cadastrar</button>
-                    </div>
+                        </div>
+                            <div class="borda_verde_flex">
+                                <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                            </div>
                     </form>
-
                 </div>
             </div>
         </main>
