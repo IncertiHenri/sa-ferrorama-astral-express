@@ -160,3 +160,32 @@ https://viacep.com.br/
 ## Fontes: 
 - https://blog.hubdodesenvolvedor.com.br/melhores-apis-cep-comparativo-2026/
 - https://viacep.com.br/
+
+ ## API de Clima
+
+A API de clima escolhida é a Open-Meteo. Ela foi escolhida por ser gratuita para uso não comercial, não exigir cadastro nem chave de autenticação e permitir a consulta de informações meteorológicas.
+
+A Open-Meteo é um serviço web que utiliza requisições HTTP e retorna dados em formato JSON, permitindo sua integração com JavaScript, PHP e outras linguagens de programação.
+
+## Pontos positivos
+
+- Gratuita para uso não comercial.
+- Não exige cadastro nem chave de API.
+- Fornece temperatura, umidade, vento e previsão do tempo.
+- Retorna dados em JSON, facilitando a integração com JavaScript e PHP.
+
+## Pontos negativos
+
+- Possui limites de requisições para uso gratuito.
+- Não garante disponibilidade contínua nem precisão absoluta dos dados.
+- Exige atribuição à Open-Meteo ao exibir os dados.
+
+## API
+
+https://open-meteo.com/
+
+## Fontes
+
+- https://open-meteo.com/
+- https://open-meteo.com/en/docs
+- https://open-meteo.com/en/terms
