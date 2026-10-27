@@ -139,4 +139,24 @@ O sistema irá cadastrar todos os funcionários que utilizarão o sistema, permi
 
 - | RNF28 | O sistema deve tratar erros durante as operações do backend sem mostrar informações internas da aplicação.
 
- 
+# APIS utilizadas
+
+## API de CEP: 
+A API de CEP que foi escolhida é a API ViaCEP. Ela foi escolhida por ser a mais usada no Brasil. Gratuito, sem cadastro, sem autenticação. Foi por muito tempo a opção padrão para projetos pequenos e médios, e ainda é relevante pela simplicidade de integração. 
+A ViaCEP é um serviço web baseado em HTTP/REST. Isso significa que qualquer linguagem de programação ou ferramenta que consiga fazer uma requisição HTTP pode usá-la.
+
+## Pontos positivos: 
+- Gratuito sem cadastro
+- Latência média de 80ms
+- Suporta busca reversa (por endereço, retorna CEPs)
+
+## Pontos Negativos: 
+- Sem SLA oficial, sem suporte
+- Uso comercial intensivo é desencorajado
+
+## API: 
+https://viacep.com.br/
+
+## Fontes: 
+- https://blog.hubdodesenvolvedor.com.br/melhores-apis-cep-comparativo-2026/
+- https://viacep.com.br/

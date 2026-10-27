@@ -5,7 +5,7 @@ include("../infra/conexao.php");
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
@@ -24,18 +24,21 @@ if (!isset($_SESSION['usuario'])) {
     <title>Tela Inicial</title>
 </head>
 
-<body id="body_tela_inicial">
+<body>
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-        </div>
-    </header>
+    <div class="conteudo">
 
-
-    <main id="main_tela_inicial">
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>! Joinville |
+                <p class="acesso_admin"> <span id="temperatura">Carregando...</span></p>
+                </p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
+            </div>
+        </header>
 
         <div class="menu">
             <div class="conteiner_menu_logo">
@@ -53,11 +56,15 @@ if (!isset($_SESSION['usuario'])) {
 
             <div id="botoes_menu">
                 <button class="botao_menu_atual" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                    Tela inicial
+                    Tela Inicial
+                </button>
+
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
                 </button>
 
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em tempo real
+                    Monitoramento em Tempo Real
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
@@ -65,11 +72,11 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                    Visualização de trens
+                    Visualização de Trens
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                    Visualização de rotas
+                    Visualização de Rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
@@ -77,34 +84,39 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                    Usuários cadastrados
+                    Usuários Cadastrados
                 </button>
 
             </div>
         </div>
 
+        <main>
 
-        <div class="conteudo_principal">
+            <div class="conteudo_tela_inicial">
 
-            <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
+                <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
 
-            <div class="area_boas_vindas">
+                <div class="area_boas_vindas">
 
-                <div>
-                    <h2 class="titulo_boas_vindas">Bem vindo(a), Admin!</h2>
+                    <div>
+                        <h2 class="titulo_boas_vindas">Bem vindo(a), <?php echo $_SESSION['user']; ?>!</h2>
 
-                    <p class="descricao_boas_vindas">
-                        Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
-                        sensores e trens, visualize relatórios e monitore os usuários do sistema
-                        de forma prática, rápida e eficiente.
-                    </p>
+                        <p class="descricao_boas_vindas">
+                            Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
+                            sensores e trens, visualize relatórios e monitore os usuários do sistema
+                            de forma prática, rápida e eficiente.
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
 
-    </main>
+        </main>
 
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

@@ -1,11 +1,11 @@
 <?php
 
-include ("../infra/conexao.php");
+include("../infra/conexao.php");
 
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
@@ -53,7 +53,7 @@ $stmt->bind_param("ssssi", $nome_trem, $modelo, $capacidade, $status, $usuario);
 
 $stmt->execute();
 
-header ("Location: visualizacao_trens.php");
+header("Location: visualizacao_trens.php");
 exit;
 
 ?>

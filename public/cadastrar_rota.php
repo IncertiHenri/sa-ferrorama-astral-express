@@ -5,7 +5,7 @@ include("../infra/conexao.php");
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
@@ -23,27 +23,27 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssi", $hora, $origem, $destino, $tempo, $id_usuario);
 
 
-  if ($stmt->execute()) {
+if ($stmt->execute()) {
 
-        $id_rota = $conn->insert_id;
+    $id_rota = $conn->insert_id;
 
-        $sql = "INSERT INTO trem_rota (id_trem, id_rota)
+    $sql = "INSERT INTO trem_rota (id_trem, id_rota)
                 VALUES (?, ?)";
 
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ii", $id_trem, $id_rota);
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $id_trem, $id_rota);
 
-        if ($stmt->execute()) {
-            header("Location: visualizacao_rotas.php");
-            exit();
-        } else {
-            echo "Erro ao associar o trem à rota.";
-        }
-
-    } else {
-        echo "Erro ao cadastrar a rota.";
-        header("Location: cadastro_rota.php");
+    if ($stmt->execute()) {
+        header("Location: visualizacao_rotas.php");
         exit();
+    } else {
+        echo "Erro ao associar o trem à rota.";
     }
+
+} else {
+    echo "Erro ao cadastrar a rota.";
+    header("Location: cadastro_rota.php");
+    exit();
+}
 
 ?>

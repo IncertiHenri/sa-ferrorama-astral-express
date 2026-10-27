@@ -5,12 +5,12 @@ include("../infra/conexao.php");
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
 if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
@@ -26,112 +26,125 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     <title>Cadastro de sensores</title>
 </head>
 
-<body id="cadastro_sensores">
+<body>
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-        </div>
-    </header>
+    <div class="conteudo">
 
-    <div class="menu">
-
-        <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
-
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
+        </header>
 
-        <div id="botoes_menu">
-            <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                Tela inicial
-            </button>
+        <div class="menu">
 
-            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                Monitoramento em tempo real
-            </button>
+            <div class="conteiner_menu_logo">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <button class="botao_menu_atual" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                Visualização de Sensores
-            </button>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
 
-            <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                Visualização de trens
-            </button>
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                </div>
+            </div>
 
-            <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                Visualização de rotas
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                Visualização de Relatórios
-            </button>
-
-            <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
+            <div id="botoes_menu">
+                <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                    Tela Inicial
                 </button>
 
-        </div>
-    </div>
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
+                </button>
 
-    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoSensores()">
-        <img src="../assets/img/sair.png" alt="voltar">
-        Voltar
-    </button>
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    Monitoramento em Tempo Real
+                </button>
 
-    <main id="main_cadastro_sensores">
+                <button class="botao_menu_atual" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+                    Visualização de Sensores
+                </button>
 
-        <div class="campo_verde_medio_sensores">
-            <div class="campo_borda_verde">
-                <h1 class="titulo_cadastro_sensor">Cadastro de Novos Sensores</h1>
+                <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+                    Visualização de Trens
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    Visualização de Rotas
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                    Visualização de Relatórios
+                </button>
+
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                    Usuários Cadastrados
+                </button>
+
             </div>
-            <div class="campo_borda_verde" id="justify_align">
+        </div>
 
-                <form action="#" id="formulario_cadastro_sensores">
+        <button id="botao_voltar" onclick="visualizacaoSensores()">
+            Retornar
+        </button>
 
-                    <div class="flex_column">
-                        <div class="flex" id="campos_cadastro_sensores">
-                            <div class="flex_column">
-                                <label for="nome" class="texto_cadastros">Nome</label>
-                                <input type="text" name="nome" class="campo_cadastros">
-                            </div>
+        <main>
 
-                            <div class="flex_column">
-                                <label for="loc" class="texto_cadastros">Localização</label>
-                                <input type="text" name="loc" class="campo_cadastros">
-                            </div>
-
-                            <div class="flex_column">
-                                <label for="dado" class="texto_cadastros">Tipo de dado</label>
-                                <select name="dado" class="campo_cadastros">
-                                    <option value="">Selecione</option>
-                                    <option value="1">Velocidade</option>
-                                    <option value="2">Temperatura</option>
-                                    <option value="3">Falha</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
-
+            <div class="fundo_form_cadastros">
+                <div class="flex_column">
+                    <div class="borda_verde_flex">
+                        <h1 class="titulo_cadastro_form">Cadastro de sensores</h1>
                     </div>
-                </form>
+                    <div class="inserir_dados_cadastro">
 
+                        <form action="#" id="form_cadastro">
+
+                            <div class="flex_column">
+                                <div class="flex_column">
+                                    <label for="nome" class="label_form">Nome:</label>
+                                    <input type="text" name="nome" class="input_form">
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="loc" class="label_form">Localização:</label>
+                                    <input type="text" name="loc" class="input_form">
+                                </div>
+
+                                <div class="flex_column">
+                                    <label for="dado" class="label_form">Tipo de dado:</label>
+                                    <select name="dado" class="input_form">
+                                        <option value="">Selecione</option>
+                                        <option value="1">Velocidade</option>
+                                        <option value="2">Temperatura</option>
+                                        <option value="3">Falha</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div class="borda_verde_flex">
+                        <button type="submit" class="botao_form_cadastro">Cadastrar</button>
+                    </div>
+
+
+
+                    </form>
+
+
+                </div>
             </div>
-        </div>
-        </div>
-    </main>
 
-    <script src="../scripts/script.js"></script>
+        </main>
 
+        <script src="../scripts/script.js"></script>
+    </div>
 </body>
 
 </html>

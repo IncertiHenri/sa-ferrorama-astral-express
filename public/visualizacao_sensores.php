@@ -5,7 +5,7 @@ include("../infra/conexao.php");
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 
@@ -22,38 +22,44 @@ if (!isset($_SESSION['usuario'])) {
 
 <body id="visualizacao_sensores">
 
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-        </div>
-    </header>
+    <div class="conteudo">
 
-    <main id="main_visualizacao_sensores">
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                </div>
+            </div>
+        </header>
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                    Tela inicial
+                    Tela Inicial
+                </button>
+
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
                 </button>
 
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em tempo real
+                    Monitoramento em Tempo Real
                 </button>
 
                 <button class="botao_menu_atual" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
@@ -61,11 +67,11 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                    Visualização de trens
+                    Visualização de Trens
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                    Visualização de rotas
+                    Visualização de Rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
@@ -73,52 +79,58 @@ if (!isset($_SESSION['usuario'])) {
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
+                    Usuários Cadastrados
                 </button>
 
             </div>
         </div>
 
-        <div class="fundo_cadastros">
+        <main>
 
-            <div class="cadastros">
+            <div class="fundo_cadastros">
 
-                <div class="borda_verde_flex">
-                    <h2 id="titulo_tabela">Visualização de Sensores</h2>
-                </div>
+                <div class="cadastros">
 
-                <div class="tabela">
-
-                    <div class="borda_verde">
-
-                        <table>
-
-                            <tr>
-                                <td>ID do Sensor</td>
-                                <td>Localização</td>
-                                <td>Tipo de Dado</td>
-                                <td>Ação</td>
-                            </tr>
-
-
-                        </table>
-
+                    <div class="borda_verde_flex">
+                        <h2 id="titulo_tabela">Visualização de Sensores</h2>
                     </div>
-                </div>
-                <?php if ($_SESSION['tipo'] === 'admin') { ?>
-                <div class="borda_verde_flex">
-                    <a href="cadastro_sensores.php"><button id="botao_sensor_novo">
-                            Cadastrar Novo Sensor
-                        </button></a>
-                </div>
-            <?php } ?>
 
+                    <div class="tabela">
+
+                        <div class="borda_verde">
+
+                            <table>
+
+                                <tr>
+                                    <td>ID do Sensor</td>
+                                    <td>Localização</td>
+                                    <td>Tipo de Dado</td>
+                                    <?php if ($_SESSION['tipo'] === 'admin') {
+                                        echo "<td>Ação</td>";
+                                    } ?>
+                                </tr>
+
+
+                            </table>
+
+                        </div>
+                    </div>
+                    <?php if ($_SESSION['tipo'] === 'admin') { ?>
+                        <div class="borda_verde_flex">
+                            <a href="cadastro_sensores.php"><button id="botao_sensor_novo">
+                                    Cadastrar Novo Sensor
+                                </button></a>
+                        </div>
+                    <?php } ?>
+
+                </div>
             </div>
-        </div>
 
-    </main>
+        </main>
 
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
+
+    </div>
 
 </body>
 

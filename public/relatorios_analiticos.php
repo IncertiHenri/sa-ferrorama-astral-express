@@ -1,9 +1,9 @@
 <?php
 
-include ("../infra/conexao.php");
+include("../infra/conexao.php");
 
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php");
+    header("Location: tela_login.php");
     exit();
 }
 

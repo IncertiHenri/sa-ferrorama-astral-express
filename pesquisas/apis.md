@@ -49,3 +49,12 @@ Tanto a autenticação quanto a autorização são partes fundamentais da estrat
 ## Exemplos de utilização de APIs em sistemas empresariais.
 - Viagens: as APIs são usadas para conectar agências e plataformas de reservas online a bancos de dados de companhias aéreas, sistemas de reservas de hotéis e serviços de transporte. 
 - Integração com mídias sociais: as APIs possibilitam que os desenvolvedores integrem funcionalidades sociais em seus aplicativos não só o login, mas também o compartilhamento de conteúdo e a obtenção de dados do usuário.
+
+---
+### Fontes: 
+- DEVMEDIA.
+- IBM
+- AWS
+- Alura
+- Stack Overflow
+- Blog idwall
