@@ -125,7 +125,7 @@ $resultado = mysqli_query($conn, $sql);
                                     echo "<td>" . $usuario["perfil"] . "</td>";
 
                                     if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud botao_excluir'>Excluir</button> </a> </td>";
                                         echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                                     }
 

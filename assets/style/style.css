@@ -499,6 +499,16 @@ tr:nth-child(odd) button:hover {
     border: 1px solid var(--verde-musgo);
 }
 
+tr button.botao_excluir:hover {
+    background-color: #a83232 !important;
+    border: 1px solid #852828 !important;
+}
+
+a.botao_crud.botao_excluir:hover {
+    background-color: #a83232;
+    border: 1px solid #852828;
+}
+
 #body_tela_inicial {
     background-image: url("../../assets/img/fundo.png");
     background-size: cover;

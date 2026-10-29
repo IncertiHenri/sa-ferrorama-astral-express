@@ -127,7 +127,7 @@ if (!isset($_SESSION['usuario'])) {
                                     echo "<td>" . $resultado["status"] . "</td>";
 
                                     if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud botao_excluir'>Excluir</button> </a> </td>";
                                         echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                                     }
 
