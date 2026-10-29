@@ -54,10 +54,6 @@ if (!isset($_SESSION['usuario'])) {
                     Tela Inicial
                 </button>
 
-                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
-                    Landing Page
-                </button>
-
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
                     Monitoramento em Tempo Real
                 </button>
