@@ -4,46 +4,55 @@ session_start();
 
 
 ?>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./assets/style/style.css?v=2">
-    <title>Login</title>
+    <link rel="stylesheet" href="./assets/style/style.css?v=2">
+    <title>Astral Express</title>
 </head>
 
-<body>
-
-    <div id="corpo_login">
-        <div class="login_esquerdo">
-            <div class="titulo_site">
-                <img src="assets/img/trem.PNG" alt="trem" class="trem">
-                <div class="inline_block">
-                    <div class="inline_flex">
-                        <h1 class="titulo_login">ASTRAL</h1>
-                        <h4 class="titulo2_login">EXPRESS</h4>
+<body class="landing_page">
+    <div id="landing_corpo">
+      <div class="landing_conteudo">
+        
+            <div class="landing_logo">
+                <img src="assets/img/trem.PNG" alt="trem" class="landing_trem">
+                <div class="landing_identidade">
+                    <div class="landing_nome">
+                        <h1>ASTRAL</h1>
+                        <h2>EXPRESS</h2>
                     </div>
-                    <p class="subtitulo_login">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                    <p>SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
             </div>
-            <p class="titulo_index">TECNOLOGIA EM MOVIMENTO</p>
-            <div class="titulo_landing ">
-                <h3> O sistema de monitoramento ferroviário do futuro. </h3>
+
+            <p class="landing_destaque">TECNOLOGIA EM MOVIMENTO</p>
+
+            <div class="landing_titulo">
+                <h3> Uma nova visão para o <span>monitoramento</span> ferroviário. </h3>
             </div>
-            <div class="descricao">
-                <h2> Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados ferroviários <br> em informações claras para uma operação mais eficiente e confiável. </h2>
+
+
+            <div class="landing_descricao">
+                <p>
+                    Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados
+                    ferroviários em informações claras para uma operação mais eficiente e confiável.
+                </p>
             </div>
-        <div>
-        <button id="botao_landing" onclick="window.location.href='public/tela_login.php'">Acesar Login</button>
-        </div>
-        </div>
-        </div>
+
+            <button id="landing_botao" onclick="window.location.href='public/tela_login.php'">Acessar Login <span>→</span></button>
 
         <script src="scripts/script.js"></script>
+     </div>
+
 
     </div>
 
+
 </body>
+
 
 </html>

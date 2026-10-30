@@ -925,40 +925,127 @@ p {
     margin-left: 30px;
 }
 
-#botao_landing {
+
+.landing_page {
+    background-color: var(--marrom);
+    background-image: none;
+    color: var(--branco);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#landing_botao {
     background-color: var(--amarelo-bebe);
     color: var(--marrom);
-    padding: 17px 25px;
+    padding: 24px 40px;
+    border: none;
     border-radius: 9px;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 30px;
-    margin-top: 25px;
-    transition: 0.3s;
+    margin-top: 42px;
 }
 
-#botao_landing:hover {
+#landing_botao:hover {
     background-color: var(--branco);
-    border-color: var(--amarelo-dourado);
-    transform: translateY(-2px);
 }
 
-.titulo_landing {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 100;
+#landing_corpo {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 35px 50px;
+}
+
+.landing_conteudo {
+    width: 100%;
+}
+
+.landing_logo {
+    display: flex;
+    align-items: center;
+}
+
+.landing_trem {
+    width: 75px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.landing_identidade {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing_nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.landing_nome h1 {
     color: var(--branco);
-    font-size: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 52px;
+    font-weight: 400;
     margin: 0;
-    padding: 0;
 }
 
-.titulo_index{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
-    color: var(--amarelo-bebe);
-    font-size: 30px;
-    border-radius: 9px;
+.landing_nome h2 {
+    color: var(--verde-musgo);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 52px;
     margin: 0;
-    padding: 0;
+}
+
+.landing_identidade p {
+    font-size: 17px;
+    letter-spacing: 5px;
+    margin: 8px 0 0;
+}
+
+.landing_destaque {
+    color: var(--amarelo-bebe);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.landing_destaque::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: var(--verde-musgo);
+}
+
+.landing_titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    max-width: 1600px;
+}
+
+.landing_titulo h3 {
+    font-size: inherit;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.landing_titulo span {
+    color: var(--verde-musgo);
+}
+
+.landing_descricao {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1250px;
+    margin-top: 45px;
+}
+
+.landing_descricao p {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.9;
+    margin: 0;
 }
