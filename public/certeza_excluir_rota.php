@@ -56,10 +56,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                     Tela Inicial
                 </button>
 
-                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
-                    Landing Page
-                </button>
-
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
                     Monitoramento em Tempo Real
                 </button>
@@ -99,7 +95,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             echo "<h2 class='texto_certeza_exclusao'>Tem certeza que quer excluir?</h2>";
             echo "<div class='container_botoes'>";
 
-            echo "<a class='botao_crud botao_excluir' href='excluir_usuario.php?id=$id'>Sim</a>";
+            echo "<a class='botao_crud botao_excluir' href='excluir_rota.php?id=$id'>Sim</a>";
             echo "<a class='botao_crud' href='visualizacao_rotas.php'>Não</a>";
 
             echo "</div>";
