@@ -45,5 +45,6 @@ Outro detalhe importante dessa modificação foi o espaçamento entre os textos,
 
 ![Landing page nova](assets/img/landing_page_nova.png)
 
-**Fonte:** https://www.meioemensagem.com.br/marketing/psicologia-das-cores
+**Fontes:** https://www.meioemensagem.com.br/marketing/psicologia-das-cores
 https://docs.google.com/document/d/1qOURhdCoCC7MXLMNn2jk1HQUC_7NA3AgWLra04B5QCk/edit?tab=t.0
+https://docs.google.com/document/d/1QK4XLcWF7e9K0_BBsI-aCjIaQ34q-F6_EiKFt0WwjpE/edit?tab=t.0
