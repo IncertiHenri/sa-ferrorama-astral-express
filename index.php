@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
+<link rel="stylesheet" href="./assets/style/style.css?v=2">
     <title>Login</title>
 </head>
 
@@ -27,17 +27,16 @@ session_start();
                     <p class="subtitulo_login">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
             </div>
-            <div class="titulo_login ">
+            <p class="titulo_index">TECNOLOGIA EM MOVIMENTO</p>
+            <div class="titulo_landing ">
                 <h3> O sistema de monitoramento ferroviário do futuro. </h3>
             </div>
-            <div class="cadastros" >
             <div class="descricao">
-                <h1> Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados ferroviários <br> em informações claras para uma operação mais eficiente e confiável. </h1>
+                <h2> Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados ferroviários <br> em informações claras para uma operação mais eficiente e confiável. </h2>
             </div>
-            <div>
-            <button id="botao_login" onclick="window.location.href='public/tela_login.php'">Acesar Login</button>
-            </div>
-            </div>
+        <div>
+        <button id="botao_landing" onclick="window.location.href='public/tela_login.php'">Acesar Login</button>
+        </div>
         </div>
         </div>
 
