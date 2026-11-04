@@ -30,7 +30,7 @@ session_start();
 
             <div class="campo_login">
 
-                <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
+                <h3 class="titulo3">Faça login para continuar sua jornada!</h3> <br>
 
                 <form id="login" action="login.php" method="POST">
                     <label for="email">E-mail:</label>

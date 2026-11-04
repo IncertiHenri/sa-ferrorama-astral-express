@@ -53,20 +53,24 @@ td {
 }
 
 .campo_login {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--verde-musgo);
     color: var(--branco);
-    padding: 30px;
+    padding: 50px;
     border-radius: 10px;
     margin-top: 30px;
     align-items: center;
     justify-content: center;
+    width: 750px;
+    height: 350px;
+    font-size: 25px;
 }
 
 .titulo_login {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 100;
     color: var(--branco);
-    font-size: 80px;
+    font-size: 100px;
     margin: 0;
     padding: 0;
 }
@@ -112,6 +116,7 @@ td {
 }
 
 #botao_login {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--amarelo-bebe);
     border: 0;
     padding: 5px;
