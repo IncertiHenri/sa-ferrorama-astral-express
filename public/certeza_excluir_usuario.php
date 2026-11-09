@@ -26,7 +26,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
         <header>
             <div id="navbar">
                 <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
                 <div class="sem_flex">
                     <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>
@@ -92,7 +91,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             echo "<h2 class='texto_certeza_exclusao'>Tem certeza que quer excluir?</h2>";
             echo "<div class='container_botoes'>";
 
-            echo "<a class='botao_crud botao_excluir' href='excluir_usuario.php?id=$id'>Sim</a>";
+            echo "<a class='botao_crud_excluir botao_excluir' href='excluir_usuario.php?id=$id'>Sim</a>";
             echo "<a class='botao_crud' href='usuarios_cadastrados.php'>Não</a>";
 
             echo "</div>";

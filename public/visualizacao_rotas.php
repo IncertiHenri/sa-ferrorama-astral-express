@@ -36,7 +36,6 @@ $rota = $conn->query($sql);
         <header>
             <div id="navbar">
                 <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
                 <div class="sem_flex">
                     <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>

@@ -32,7 +32,6 @@ if (!isset($_SESSION['usuario'])) {
         <header>
             <div id="navbar">
                 <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
                 <div class="sem_flex">
                     <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>
@@ -103,13 +102,13 @@ if (!isset($_SESSION['usuario'])) {
                             <table>
 
                                 <tr class="titulos_tabelas">
-                                    <td>Matrícula</td>
-                                    <td>Nome</td>
-                                    <td>Usuário</td>
-                                    <td>E-mail</td>
-                                    <td>Cargo</td>
+                                    <td class="texto_claro">Matrícula</td>
+                                    <td class="texto_claro">Nome</td>
+                                    <td class="texto_claro">Usuário</td>
+                                    <td class="texto_claro">E-mail</td>
+                                    <td class="texto_claro">Cargo</td>
                                     <?php if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td colspan='7'>Ações</td>";
+                                        echo "<td class='texto_claro' colspan='7'>Ações</td>";
                                     } ?>
                                 </tr>
 
@@ -126,8 +125,8 @@ if (!isset($_SESSION['usuario'])) {
                                     echo "<td>" . $usuario["perfil"] . "</td>";
 
                                     if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud botao_excluir'>Excluir</button> </a> </td>";
-                                        echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                        echo "<td> <a href='certeza_excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud_excluir botao_excluir'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud_atualizar'>Atualizar</button> </a> </td>";
                                     }
 
                                     echo "</tr>";

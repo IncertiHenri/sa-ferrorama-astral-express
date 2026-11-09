@@ -33,7 +33,6 @@ if (!isset($_SESSION['usuario'])) {
                 <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>! Joinville |
                 <p class="acesso_admin"> <span id="temperatura">Carregando...</span></p>
                 </p>
-                <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
                 <div class="sem_flex">
                     <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
                 </div>
