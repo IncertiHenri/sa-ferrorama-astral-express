@@ -38,8 +38,14 @@ session_start();
 
             <div class="landing_descricao">
                 <p>
-                    Acompanhe trens e rotas em um só lugar. Com sensores e registros periódicos, a Astral Express transforma dados
-                    ferroviários em informações claras para uma operação mais eficiente e confiável.
+                    A Astral Express é um sistema de monitoramento ferroviário que utiliza sensores para acompanhar trens e rotas, 
+                    gerando registros periódicos com informações importantes para a operação.
+
+                    O sistema permite cadastrar trens, rotas e usuários, vinculando funcionários responsáveis a cada um. 
+
+                    Com foco em segurança, confiabilidade e baixa taxa de erros, a Astral Express transforma dados ferroviários em informações claras para uma operação mais eficiente.
+
+                    Acompanhe trens e rotas em um só lugar.
                 </p>
             </div>
 
