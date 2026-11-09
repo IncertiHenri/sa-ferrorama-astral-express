@@ -1,11 +1,16 @@
 <?php
+session_start();
 
 include("../infra/conexao.php");
 
-session_start();
 
 $sql = "SELECT id_usuario, nome, usuario, email, perfil FROM usuario";
 $resultado = mysqli_query($conn, $sql);
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: tela_login.php");
+    exit();
+} 
 
 ?>
 
