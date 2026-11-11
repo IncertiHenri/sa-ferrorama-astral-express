@@ -57,26 +57,6 @@ CREATE TABLE
         FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
     );
 
-CREATE TABLE
-    sensor (
-        id_sensor INT PRIMARY KEY AUTO_INCREMENT,
-        tipo_dado VARCHAR(45) NOT NULL,
-        nome VARCHAR(45) NOT NULL,
-        localizacao VARCHAR(45) NOT NULL,
-        id_trem INT,
-        id_rota INT,
-        id_usuario INT,
-        FOREIGN KEY (id_trem) REFERENCES trem (id_trem),
-        FOREIGN KEY (id_rota) REFERENCES rota (id_rota),
-        FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
-    );
-
-CREATE TABLE
-    registro_sensor (
-        id_registro_sensor INT PRIMARY KEY AUTO_INCREMENT,
-        id_sensor INT,
-        FOREIGN KEY (id_sensor) REFERENCES sensor (id_sensor)
-    );
 
 INSERT INTO
     usuario (nome, usuario, senha, email, perfil)

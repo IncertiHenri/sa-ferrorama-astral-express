@@ -301,7 +301,7 @@ body {
     color: var(--branco);
 }
 
-#cadastro_sensores {
+#sessao_cadastro {
     margin: 0;
     background-image: url("../../assets/img/fundo.png");
     background-size: cover;

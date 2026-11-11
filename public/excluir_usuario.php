@@ -11,10 +11,10 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 $id = $_GET["id"];
 
-$sql = "SELECT id_usuario FROM trem WHERE id_usuario = ? UNION SELECT id_usuario FROM rota WHERE id_usuario = ? UNION SELECT id_usuario FROM sensor WHERE id_usuario = ?";
+$sql = "SELECT id_usuario FROM trem WHERE id_usuario = ? UNION SELECT id_usuario FROM rota WHERE id_usuario = ?";
 
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "iii", $id, $id, $id);
+mysqli_stmt_bind_param($stmt, "ii", $id, $id);
 mysqli_stmt_execute($stmt);
 
 $resultado = $stmt->get_result();
