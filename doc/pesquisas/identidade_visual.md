@@ -12,16 +12,16 @@ Utilizamos tons de verde, pois muitas pessoas associam as viagens de trem à nat
 
 Também utilizamos um recurso que muda a cor dos botões quando o cursor do mouse passa por cima, visando melhorar a usabilidade e facilitar a utilização do sistema. Nos botões de exclusão a cor muda de verde para vermelho, chamando mais a atenção do usuário durante a operação e deixando mais claro o risco daquela ação.
 
-![Botões de exclusão em vermelho](assets/img/botao_excluir.png)
+![Botões de exclusão em vermelho](../../assets/img/botao_excluir.png)
 
 Optamos por utilizar a imagem de um trem em nossa logo, pois ela transmite bem o objetivo e a identidade da nossa empresa no ramo ferroviário. Também colocamos fotos de trens, ferrovias e paisagens no site a fim de torná-lo mais atrativo para os usuários.
 
 # Modificações no Visual do Site
 
 Nosso site passou por algumas modificações em relação ao design, desde o mockup até a versão final, a fim de garantir que ficasse esteticamente coerente e funcional, proporcionando uma boa experiência de utilização ao usuário.
-
-![Tela inicial antiga](assets/img/tela_inicial_antiga.jpg)
-![Tela inicial nova](assets/img/tela_inicial_nova.png)
+ 
+![Tela inicial antiga](../../assets/img/tela_inicial_antiga.jpg)
+![Tela inicial nova](../../assets/img/tela_inicial_nova.png)
 
 Uma das maiores mudanças aconteceu na tela inicial, onde retiramos os botões de atalho e optamos por deixar tudo no menu lateral do site, tornando-o mais direto e claro. Também acrescentamos a imagem de uma ferrovia para que a tela ficasse mais bonita.
 
@@ -33,7 +33,7 @@ Por fim, também mudamos o fundo, deixando o site mais claro sem perder a identi
 
 Durante o desenvolvimento, foi solicitada a criação de uma landing page para o site. Inicialmente foi elaborada uma ideia utilizando o background padrão das outras páginas e letras com cores opostas ao fundo, para facilitar a leitura. A página apresenta uma breve descrição do sistema e possui um botão que direciona o usuário para o login.
 
-![Landing page velha](assets/img/landing_page_velha.png)
+![Landing page velha](../../assets/img/landing_page_velha.png)
 
 Em relação à nomenclatura, os elementos foram nomeados de acordo com suas funções e com a página a que pertencem, facilitando a compreensão e a identificação de suas funcionalidades.
 
@@ -43,7 +43,7 @@ Após a criação do conceito inicial, foi feita uma atualização no visual da 
 
 Outro detalhe importante dessa modificação foi o espaçamento entre os textos, o botão e a logo, pensado para melhorar a visualização de cada elemento.
 
-![Landing page nova](assets/img/landing_page_nova.png)
+![Landing page nova](../../assets/img/landing_page_nova.png)
 
 **Fontes:** https://www.meioemensagem.com.br/marketing/psicologia-das-cores
 https://docs.google.com/document/d/1qOURhdCoCC7MXLMNn2jk1HQUC_7NA3AgWLra04B5QCk/edit?tab=t.0

@@ -9,7 +9,7 @@
 ## O que é APIs REST?
  É uma API que possui condições de como uma API tem que funcionar, foi criada como diretriz de gerenciamento a comunicação de uma rede complexa, só que usam ele para projetar APIs com várias arquiteturas diferentes, sendo esse serviço web chamado de Web RESTful, alguns dos princípios do estilo da arquitetura são.
 - Interface uniforme.
-- Ausência de estados.
+- Ausência de estados. 
 - Sistema em camadas.
 - Capacidade de armazenamento.
 - Código sob demanda.
