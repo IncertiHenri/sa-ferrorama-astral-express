@@ -86,7 +86,7 @@ if (!isset($_SESSION['usuario'])) {
 
                         <p class="descricao_boas_vindas">
                             Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
-                            sensores e trens, visualize relatórios e monitore os usuários do sistema
+                            trens, visualize relatórios e monitore os usuários do sistema
                             de forma prática, rápida e eficiente.
                         </p>
                     </div>

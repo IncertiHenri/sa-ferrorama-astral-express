@@ -41,7 +41,7 @@ if ($resultado_usuario === false) {
     <title>Cadastro de rotas</title>
 </head>
 
-<body id="cadastro_sensores">
+<body id="sessao_cadastro">
 
     <div class="conteudo">
 
