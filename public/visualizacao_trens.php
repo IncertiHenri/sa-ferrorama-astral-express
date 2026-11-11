@@ -52,24 +52,12 @@ if (!isset($_SESSION['usuario'])) {
                     Tela Inicial
                 </button>
 
-                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em Tempo Real
-                </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    Visualização de Sensores
-                </button>
-
                 <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
                     Visualização de Trens
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                     Visualização de Rotas
-                </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    Visualização de Relatórios
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
@@ -95,14 +83,14 @@ if (!isset($_SESSION['usuario'])) {
                             <table>
 
                                 <tr>
-                                    <td>ID do trem</td>
-                                    <td>Funcionário</td>
-                                    <td>Nome do Trem</td>
-                                    <td>Modelo</td>
-                                    <td>Capacidade</td>
-                                    <td>Status</td>
+                                    <td class="texto_claro">ID do trem</td>
+                                    <td class="texto_claro">Funcionário</td>
+                                    <td class="texto_claro">Nome do Trem</td>
+                                    <td class="texto_claro">Modelo</td>
+                                    <td class="texto_claro">Capacidade</td>
+                                    <td class="texto_claro">Status</td>
                                     <?php if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td colspan='8'>Ação</td>";
+                                        echo "<td colspan='8' class='texto_claro'>Ação</td>";
                                     } ?>
                                 </tr>
 
@@ -122,8 +110,8 @@ if (!isset($_SESSION['usuario'])) {
                                     echo "<td>" . $resultado["status"] . "</td>";
 
                                     if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud botao_excluir'>Excluir</button> </a> </td>";
-                                        echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                        echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud_excluir botao_excluir'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud_atualizar'>Atualizar</button> </a> </td>";
                                     }
 
                                     echo "</tr>";
