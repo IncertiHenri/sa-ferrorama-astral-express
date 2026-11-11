@@ -20,7 +20,7 @@ $bairro = $_POST["bairro"];
 $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
 
-if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L}]+$/u', $nome)) {
+if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L}\s]+$/u', $nome)) {
     echo "<script>alert('Nome inválido! O nome deve conter apenas letras e no mínimo 3');
     window.location.href = 'cadastro_usuarios.php?id=$id';
     </script>";
