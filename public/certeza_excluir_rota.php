@@ -82,7 +82,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             echo "<h2 class='texto_certeza_exclusao'>Tem certeza que quer excluir?</h2>";
             echo "<div class='container_botoes'>";
 
-            echo "<a class='botao_crud botao_excluir' href='excluir_rota.php?id=$id'>Sim</a>";
+            echo "<a class='botao_crud_excluir botao_excluir' href='excluir_rota.php?id=$id'>Sim</a>";
             echo "<a class='botao_crud' href='visualizacao_rotas.php'>Não</a>";
 
             echo "</div>";

@@ -72,12 +72,12 @@ if ($resultado_usuario === false) {
                     Tela Inicial
                 </button>
 
-                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    Visualização de Sensores
-                </button>
-
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
                     Visualização de Trens
+                </button>
+
+                <button class="botao_menu_atual" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    Visualização de Rotas
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
