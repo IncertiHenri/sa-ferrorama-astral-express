@@ -35,51 +35,24 @@ O sistema irá cadastrar todos os funcionários que utilizarão o sistema, permi
 
 - | RN7 | Na tela principal deve ter um botão para sair do sistema 
 
-- | RN8 | Na tela principal deve ter um botão para acessar os cadastros de sensores e trens 
+- | RN8 | Na tela principal deve ter um botão para acessar os cadastros de trens 
 
-- | RN9 | A listagem dos sensores cadastrados devem conter ID do sensor, localização, tipo de dado monitorado, botão excluir e botão de visualização de detalhes
+- | RN9 | A velocidade, localização e status operacional é exibido ao usuário 
 
-- | RN10 | Deve ser exibido o nome, a localização e o tipo de dado monitorado do sensor dentro de um campo contendo as informações 
-
-- | RN11 | Cada sensor deve estar obrigatoriamente vinculado a um único trem ou trilho. 
-
-- | RN12 | Quando um sensor for excluído, uma tela de confirmação aparece ao usuário 
-
-- | RN13 | Sensores com dados já registrados não podem ser excluídos. Assim é exibida a mensagem “Não é possível excluir sensores com dados registrados” 
-
-- | RN14 | A velocidade, localização e status operacional é exibido ao usuário 
-
-- | RN15 | Relatórios são gerados de acordo com filtros de período, tipos de dados, tipos de falhas, linha/trecho e status do sensor. 
-
-- | RN16 | Os relatórios são analíticos e possuem gráficos interativos para a visualização do desempenho da ferrovia e identificação de padrões ou falhas operacionais 
-
-- | RN17 | Os relatórios analíticos são efetuados em uma tela específica que o usuário deve ter acesso 
-
-- | RN18 | Relatórios gerados anteriormente, podem ser acessados e ficam ordenados com filtros de período e tipo de falha 
-
-- | RN19 | O sistema deve permitir ao banco de dados associar o sensor cadastrado a um trem específico. 
 
 ## Requisitos Funcionais:
 
-- | RF1 | O sistema deve permitir o usuário cadastrar um sensor
+- | RF1 | O sistema deve permitir que o login seja realizado.
 
-- | RF2 | O sistema deve permitir que o login seja realizado.
+- | RF2 | O sistema deve permitir o usuário cadastrar, atualizar, excluir, visualizar um trem
 
-- | RF3 | O sistema deve permitir o usuário cadastrar, atualizar, excluir, visualizar um trem
+- | RF3 | O sistema deve permitir o usuário cadastrar rota de trem
 
-- | RF4 | O sistema deve permitir o usuário cadastrar rota de trem
+- | RF4 | O sistema deve criar uma sessão se a credencial for autenticada
 
-- | RF5 | O sistema deve criar uma sessão se a credencial for autenticada
+- | RF5 | O sistema deve exibir o nome do administrador autenticado
 
-- | RF6 | O sistema deve exibir o nome do administrador autenticado
-
-- | RF7 | O sistema deve permitir fazer logout, encerrando a sessão
-
-- | RF8 | O sistema deve emitir, excluir, atualizar relatórios
-
-- | RF9 | O sistema deve permitir que o usuário visualizar os relatórios emitidos anteriormente
-
-- | RF10 | O sistema deve mostrar a listagem dos sensores.
+- | RF6 | O sistema deve permitir fazer logout, encerrando a sessão
 
 ## Requisitos não funcionais
 
@@ -117,29 +90,41 @@ O sistema irá cadastrar todos os funcionários que utilizarão o sistema, permi
 
 - | RNF17 | O sistema deve ter um botão “sair do sistema”.
 
-- | RNF18 | O sistema deve ter um botão para acessar todos os cadastros dos trens e sensores.
+- | RNF18 | O sistema deve armazenar as senhas dos usuários utilizando um mecanismo seguro de hash.
 
-- | RNF19 | O sistema deve permitir que relatórios emitidos sejam acessados buscando filtros de período e tipo de falha.
+- | RNF19 | O sistema deve conter proteção contra SQL injection.
 
-- | RNF20 | O sistema deve exibir uma tela de confirmação quando o usuário escolhe excluir um sensor.
+- | RNF20 | O sistema deve realizar consultas parametrizadas nas operações com o banco de dados.
 
-- | RNF21 | O sistema deve armazenar as senhas dos usuários utilizando um mecanismo seguro de hash.
+- | RNF21 | O sistema deve pelos formulários validar os dados recebidos no backend antes de realizar as operações no banco de dados.
 
-- | RNF22 | O sistema deve conter proteção contra SQL injection.
+- | RNF22 | O sistema deve impedir que usuários vejam dados que não estejam no nível de acesso.
 
-- | RNF23 | O sistema deve realizar consultas parametrizadas nas operações com o banco de dados.
+- | RNF23 | O sistema deve impedir que usuários que não possuem permissão atribuam a si o perfil de administrador por dados enviados pelo frontend. 
 
-- | RNF24 | O sistema deve pelos formulários validar os dados recebidos no backend antes de realizar as operações no banco de dados.
+- | RNF24 | O sistema deve evitar exposição desnecessária de dados sensíveis no frontend.
 
-- | RNF25 | O sistema deve impedir que usuários vejam dados que não estejam no nível de acesso.
+- | RNF25 | O sistema deve tratar erros durante as operações do backend sem mostrar informações internas da aplicação.
 
-- | RNF26 | O sistema deve impedir que usuários que não possuem permissão atribuam a si o perfil de administrador por dados enviados pelo frontend. 
+# Tecnologias utilizadas 
 
-- | RNF27 | O sistema deve evitar exposição desnecessária de dados sensíveis no frontend.
+- HTML: Estruturação das páginas.
 
-- | RNF28 | O sistema deve tratar erros durante as operações do backend sem mostrar informações internas da aplicação.
+- CSS: Estilização e organização visual.
 
-# APIS utilizadas
+- JavaScript: Interatividade e manipulação de elementos.
+
+- PHP: Processamento das requisições e regras de negócio.
+
+- MySQL: Armazenamento e gerenciamento dos dados.
+
+- XAMPP: Ambiente de desenvolvimento local.
+
+- Git e GitHub: Versionamento e colaboração.
+
+- APIs: Integração de funcionalidades(especificadas ao final do documento).
+
+# APIs utilizadas
 
 ## API de CEP: 
 A API de CEP que foi escolhida é a API ViaCEP. Ela foi escolhida por ser a mais usada no Brasil. Gratuito, sem cadastro, sem autenticação. Foi por muito tempo a opção padrão para projetos pequenos e médios, e ainda é relevante pela simplicidade de integração. 
@@ -189,3 +174,156 @@ https://open-meteo.com/
 - https://open-meteo.com/
 - https://open-meteo.com/en/docs
 - https://open-meteo.com/en/terms
+
+# Requisitos para execução do sistema
+
+- Ambiente de desenvolvimento vitual(preferencialmente XAMPP): Rodar o sistema.
+
+- Visual Studio Code: Caso queira realizar alterações no código.
+
+- Git e GitHub: Versionar o sistema e buscar a base dele.
+
+- Navegador: Executar o sistema.
+
+# Instalação e configuração 
+
+1- Instalar o XAMPP.
+
+2- Baixar ou clonar o repositório do GitHub.
+
+3- Localizar a pasta de instalação do XAMPP.
+
+4- Colocar a pasta do projeto dentro de HTdocs.
+
+5- Abrir o painel de controle do XAMPP.
+
+6- Iniciar os serviços Apache e MySQL.
+
+7- Configurar a conexão com o banco de dados.
+
+8- Executar o banco de dados dentro do PHPMyAdmin.
+
+9- Pronto para o uso.
+
+# Como iniciar a aplicação 
+
+1- Iniciar o Apache e MySQL pelo XAMPP.
+
+2- Abrir o navegador.
+
+3- Digitar o endereço local do projeto.
+**Importante lembrar de colocar o arquivo do código dentro da pasta HTdocs**
+
+4- Pronto para o uso.
+
+# Perfis com acesso e permissões
+
+As permissões de visualização de todo e qualquer Trem, Rota e Usuário é concedido a qualquer um que seja funcionário. Já a permissão de exclusão, atualização e cadastro é definida apenas para Administradores.
+
+# Estrutura geral do projeto
+
+Ferrorama Astral Express:.
+│   .gitignore
+│   index.php
+│   LICENSE
+│   README.md
+│   
+├───assets
+│   ├───img
+│   │       3_pontos.png
+│   │       banner_trem.jpg
+│   │       botao_excluir.png
+│   │       cadastro_relatorios.png
+│   │       cadastro_sensores.png
+│   │       calendario_branco.png
+│   │       calendario_preto.png
+│   │       consumo_medio.png
+│   │       estacao.png
+│   │       estacao_2.png
+│   │       falha.png
+│   │       filtro.png
+│   │       fundo.png
+│   │       landing_page_nova.png
+│   │       landing_page_velha.png
+│   │       mapa_trilho.png
+│   │       mecanica.png
+│   │       monitoramento_tempo.png
+│   │       pesquisa_PDO.png
+│   │       recarregar.png
+│   │       sair.png
+│   │       tela_inicial.png
+│   │       tela_inicial_antiga.jpg
+│   │       tela_inicial_nova.png
+│   │       temperatura.png
+│   │       trem.PNG
+│   │       trem_boas_vindas.png
+│   │       trem_botao.png
+│   │       usuario.png
+│   │       usuarios.png
+│   │       velocidade.png
+│   │       
+│   └───style
+│           style.css
+│           
+├───database
+│       db.sql
+│       
+├───doc
+│   │   relatorio-uso-ia.md
+│   │   SCRUM.md
+│   │   XAMPP.md
+│   │   
+│   ├───crud
+│   │       php.md
+│   │       
+│   └───pesquisas
+│           apis.md
+│           identidade_visual.md
+│           image.png
+│           pdo.md
+│           
+├───infra
+│       conexao.php
+│       
+├───public
+│       cadastrar_rota.php
+│       cadastrar_trem.php
+│       cadastrar_usuarios.php
+│       cadastro_rotas.php
+│       cadastro_trens.php
+│       cadastro_usuarios.php
+│       certeza_excluir_rota.php
+│       certeza_excluir_trem.php
+│       certeza_excluir_usuario.php
+│       editar_rota.php
+│       editar_trens.php
+│       editar_usuario.php
+│       excluir_rota.php
+│       excluir_trens.php
+│       excluir_usuario.php
+│       formulario_editar_rota.php
+│       formulario_editar_trem.php
+│       formulario_editar_usuario.php
+│       login.php
+│       logout.php
+│       tela_inicial.php
+│       tela_login.php
+│       usuarios_cadastrados.php
+│       visualizacao_rotas.php
+│       visualizacao_trens.php
+│       
+└───scripts
+        script.js
+
+# Imagens de telas da versão final
+
+![Landing page](assets/img/landing_page_nova.png)
+![Tela inicial](assets/img/tela_inicial_nova.png)
+
+# Integrantes e suas contribuições
+
+- Henrique Incerti
+- Serenna Tavares
+- Thaís Duarte
+- Natan Vitor
+- Contribuição de Annie Marrie
