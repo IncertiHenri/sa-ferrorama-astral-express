@@ -94,15 +94,15 @@ $rota = $conn->query($sql);
                             <table>
 
                                 <tr>
-                                    <td>ID da rota</td>
-                                    <td>Hora da criação</td>
-                                    <td>Origem</td>
-                                    <td>Destino</td>
-                                    <td>Tempo</td>
-                                    <td>Trem Associado</td>
-                                    <td>Usuário Associado</td>
+                                    <td class="texto_claro">ID da rota</td>
+                                    <td class="texto_claro">Hora da criação</td>
+                                    <td class="texto_claro">Origem</td>
+                                    <td class="texto_claro">Destino</td>
+                                    <td class="texto_claro">Tempo</td>
+                                    <td class="texto_claro">Trem Associado</td>
+                                    <td class="texto_claro">Usuário Associado</td>
                                     <?php if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td colspan='9'>Ação</td>";
+                                        echo "<td colspan='9' class='texto_claro'>Ação</td>";
                                     } ?>
                                 </tr>
                                 <?php
@@ -118,8 +118,8 @@ $rota = $conn->query($sql);
                                     echo "<td>" . $resultado["usuario_associado"] . "</td>";
 
                                     if ($_SESSION['tipo'] === 'admin') {
-                                        echo "<td> <a href='certeza_excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud botao_excluir'>Excluir</button> </a> </td>";
-                                        echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                        echo "<td> <a href='certeza_excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud_excluir botao_excluir'>Excluir</button> </a> </td>";
+                                        echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud_atualizar'>Atualizar</button> </a> </td>";
                                     }
 
                                     echo "</tr>";
