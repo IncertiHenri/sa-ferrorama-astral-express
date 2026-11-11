@@ -58,14 +58,6 @@ if (!isset($_SESSION['usuario'])) {
                     Tela Inicial
                 </button>
 
-                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em Tempo Real
-                </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    Visualização de Sensores
-                </button>
-
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
                     Visualização de Trens
                 </button>
@@ -73,11 +65,7 @@ if (!isset($_SESSION['usuario'])) {
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                     Visualização de Rotas
                 </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    Visualização de Relatórios
-                </button>
-
+                
                 <button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                     Usuários Cadastrados
                 </button>

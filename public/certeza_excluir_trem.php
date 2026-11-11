@@ -52,14 +52,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                     Tela Inicial
                 </button>
 
-                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em Tempo Real
-                </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    Visualização de Sensores
-                </button>
-
                 <?php
 
                 if ($_SESSION['tipo'] === 'admin') {
@@ -75,10 +67,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                     Visualização de Rotas
-                </button>
-
-                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    Visualização de Relatórios
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
