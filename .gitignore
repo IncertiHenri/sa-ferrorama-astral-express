@@ -1,0 +1,10 @@
+# Arquivos temporários
+*.log
+*.tmp
+
+# Arquivos do Windows
+Thumbs.db
+desktop.ini
+
+# Arquivos do macOS
+.DS_Store
