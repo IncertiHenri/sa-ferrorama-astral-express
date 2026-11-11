@@ -10,6 +10,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 }
 
 ?>
+
 <html lang="en">
 
 <head>
@@ -25,12 +26,16 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
     <div class="conteudo">
 
-
         <header>
             <div id="navbar">
-                <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+                <p class="acesso_admin">
+                    Olá, <?php echo $_SESSION['usuario']; ?>!
+                </p>
+
                 <div class="sem_flex">
-                    <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+                    <button id="botao_sair" onclick="sair()">
+                        Sair do Sistema
+                    </button>
                 </div>
             </div>
         </header>
@@ -46,11 +51,14 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                         <h4 class="titulo2_menu">EXPRESS</h4>
                     </div>
 
-                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                    <p class="subtitulo_menu">
+                        SISTEMA DE MONITORAMENTO FERROVIÁRIO
+                    </p>
                 </div>
             </div>
 
             <div id="botoes_menu">
+
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela Inicial
                 </button>
@@ -77,43 +85,52 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
         <main>
 
             <div class="fundo_form_cadastros">
+
                 <div class="flex_column">
+
                     <div class="borda_verde_flex">
-                        <h1 class="titulo_cadastro_form">Cadastro de trens</h1>
+                        <h1 class="titulo_cadastro_form">
+                            Cadastro de trens
+                        </h1>
                     </div>
+
                     <div class="inserir_dados_cadastro">
 
                         <form action="cadastrar_trem.php" id="formulario_cadastro_trens" method="POST">
 
-                            <div class="flex_column">
-                                <div class="flex_column">
+                            <div class="campos_lado_a_lado">
+
+                                <div class="campo_form">
                                     <label for="nome_trem" class="label_form">Nome:</label>
-                                    <input type="text" name="nome_trem" class="input_form" required>
+                                    <input type="text" name="nome_trem" id="nome_trem" class="input_form" required>
                                 </div>
 
-                                <div class="flex_column">
+                                <div class="campo_form">
                                     <label for="modelo" class="label_form">Modelo:</label>
-                                    <input type="text" name="modelo" class="input_form" required>
+                                    <input type="text" name="modelo" id="modelo" class="input_form" required>
                                 </div>
 
-                                <div class="flex_column">
+                                <div class="campo_form">
                                     <label for="capacidade" class="label_form">Capacidade:</label>
-                                    <input type="number" name="capacidade" class="input_form" required>
+                                    <input type="number" name="capacidade" id="capacidade" class="input_form" required>
                                 </div>
 
-                                <div class="flex_column">
+                                <div class="campo_form">
                                     <label for="status" class="label_form">Status</label>
-                                    <select name="status" class="input_form" required>
+
+                                    <select name="status" id="status" class="input_form" required>
                                         <option value="">Selecione</option>
                                         <option value="ativo">Ativo</option>
                                         <option value="inativo">Inativo</option>
                                     </select>
                                 </div>
 
-                                <div class="flex_column">
+                                <div class="campo_form">
                                     <label for="funcionario" class="label_form">Funcionário</label>
-                                    <select name="funcionario" class="input_form" required>
+
+                                    <select name="funcionario" id="funcionario" class="input_form" required>
                                         <option value="">Selecione</option>
+
                                         <?php
 
                                         $sql = "SELECT id_usuario, usuario FROM usuario";
@@ -123,25 +140,31 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                                         while ($usuario = mysqli_fetch_assoc($busca)) {
                                             echo "<option value='" . $usuario["id_usuario"] . "'>" . $usuario["usuario"] . "</option>";
                                         }
+
                                         ?>
+
                                     </select>
                                 </div>
 
                             </div>
+
+                            <div class="borda_verde_flex">
+                                <button type="submit" class="botao_form_cadastro">
+                                    Cadastrar
+                                </button>
+                            </div>
+
+                        </form>
+
                     </div>
-                    <div class="borda_verde_flex">
-                        <button type="submit" class="botao_form_cadastro">Cadastrar</button>
-                    </div>
-
-
-                    </form>
-
 
                 </div>
+
             </div>
-    </div>
-    </main>
-    <script src="../scripts/script.js"></script>
+
+        </main>
+
+        <script src="../scripts/script.js"></script>
 
     </div>
 

@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express;
+CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express2;
 
-USE sistema_ferroviario_astral_express;
+USE sistema_ferroviario_astral_express2;
 
 CREATE TABLE
     usuario (

@@ -135,26 +135,6 @@ td {
     color: var(--branco);
 }
 
-#email {
-    background-color: var(--marrom);
-    border: 0;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    color: var(--branco);
-    font-size: 20px;
-}
-
-#senha {
-    background-color: var(--marrom);
-    border: 0;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    color: var(--branco);
-    font-size: 20px;
-}
-
 label {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -318,11 +298,11 @@ body {
 }
 
 .flex_column {
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 #botao_cadastrar_sensor {
@@ -343,6 +323,10 @@ body {
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .input_visualizacao {
@@ -361,7 +345,9 @@ body {
     display: block;
     text-align: left;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #formulario_visualizacao_relatorios {
@@ -466,6 +452,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+    padding: 15px 10px;
 }
 
 #campos_cadastro_usuarios {
@@ -1095,3 +1083,86 @@ p {
     width: 100%;
     margin-top: 5px;
 }
+
+.campos_lado_a_lado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo_form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+    gap: 8px;
+}
+
+.campos_lado_a_lado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.campo_form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .campos_lado_a_lado {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .campos_lado_a_lado {
+        grid-template-columns: 1fr;
+    }
+}
+
+.campos_usuarios {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.campos_usuarios > .flex_column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.campos_usuarios > .flex_column:nth-child(-n+4) {
+    grid-column: span 5;
+}
+
+.campos_usuarios > .flex_column:nth-child(n+5) {
+    grid-column: span 4;
+}
+
+.campos_usuarios .input_form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+    .campos_usuarios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campos_usuarios > .flex_column {
+        grid-column: span 1 !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .campos_usuarios {
+        grid-template-columns: 1fr;
+    }
+}
+
