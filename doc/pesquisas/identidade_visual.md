@@ -10,9 +10,9 @@ A identidade visual e a coerência na escolha das cores são partes essenciais n
 
 Utilizamos tons de verde, pois muitas pessoas associam as viagens de trem à natureza e à tranquilidade. Além disso, o verde representa renovação, equilíbrio e harmonia, sendo também associado à segurança, algo que qualquer empresa de transporte busca transmitir aos seus possíveis passageiros. Mantivemos o site objetivo, prático e funcional.
 
-Também utilizamos um recurso que muda a cor dos botões quando o cursor do mouse passa por cima, visando melhorar a usabilidade e facilitar a utilização do sistema. Nos botões de exclusão a cor muda de verde para vermelho, chamando mais a atenção do usuário durante a operação e deixando mais claro o risco daquela ação.
+Também utilizamos um recurso que altera a cor dos botões quando o cursor do mouse passa por cima, visando melhorar a usabilidade e facilitar a utilização do sistema. Os botões de exclusão possuem a cor vermelha, enquanto os de atualização são azuis. Essa diferenciação visual ajuda o usuário a identificar melhor a finalidade de cada ação, tornando a navegação mais intuitiva e destacando as operações que podem modificar ou remover informações do sistema.
 
-![Botões de exclusão em vermelho](../../assets/img/botao_excluir.png)
+>VOU COLOCAR FOTO DA VERSÃO FINAL DA TABELA PRA MOSTRAR BOTÕES AQUI<
 
 Optamos por utilizar a imagem de um trem em nossa logo, pois ela transmite bem o objetivo e a identidade da nossa empresa no ramo ferroviário. Também colocamos fotos de trens, ferrovias e paisagens no site a fim de torná-lo mais atrativo para os usuários.
 
