@@ -39,7 +39,7 @@ Em relação à nomenclatura, os elementos foram nomeados de acordo com suas fun
 
 Durante o desenvolvimento da landing page, não houve problemas na criação do código. A principal alteração planejada foi na parte visual, com o intuito de melhorar sua apresentação.
 
-Após a criação do conceito inicial, foi feita uma atualização no visual da página. Foram alterados os tamanhos dos textos, dividindo melhor o título, a descrição e o botão, que também teve seu tamanho aumentado. No título, o texto foi modificado e uma das palavras, que antes era branca, passou a ser verde. O texto localizado acima do título foi diminuído e também foi acrescentada uma linha lateral antes dele.
+Após a criação do conceito inicial, foi feita uma atualização no visual da página. Foram alterados os tamanhos dos textos, dividindo melhor o título, a descrição e o botão, que também teve seu tamanho aumentado. A descrição foi complementada com mais informações, conforme solicitado pelo professor, tornando o conteúdo mais completo. No título, o texto foi modificado e uma das palavras, que antes era branca, passou a ser verde. O texto localizado acima do título foi diminuído e também foi acrescentada uma linha lateral antes dele.
 
 Outro detalhe importante dessa modificação foi o espaçamento entre os textos, o botão e a logo, pensado para melhorar a visualização de cada elemento.
 
