@@ -1,3 +1,4 @@
+
 <?php
 
 include("../infra/conexao.php");
@@ -12,7 +13,8 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 $id = $_GET["id"];
 
 ?>
-<html lang="en">
+
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -20,39 +22,50 @@ $id = $_GET["id"];
 
     <link rel="stylesheet" href="../assets/style/style.css">
 
-    <title>Usuários cadastrados</title>
+    <title>Edição de Usuários</title>
 </head>
 
-<body id="usuarios_cadastrados">
-
-    <header>
-        <div id="navbar">
-            <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
-            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
-            <div class="sem_flex">
-                <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-            </div>
-        </div>
-    </header>
+<body id="sessao_cadastro">
 
     <div class="conteudo">
+
+        <header>
+            <div id="navbar">
+
+                <p class="acesso_admin">
+                    Olá, <?php echo $_SESSION['usuario']; ?>!
+                </p>
+
+                <button id="botao_sair" onclick="sair()">
+                    Sair do Sistema
+                </button>
+
+            </div>
+        </header>
 
         <div class="menu">
 
             <div class="conteiner_menu_logo">
+
                 <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
                 <div class="inline_block">
+
                     <div class="inline_flex">
                         <h1 class="titulo_menu">ASTRAL</h1>
                         <h4 class="titulo2_menu">EXPRESS</h4>
                     </div>
 
-                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                    <p class="subtitulo_menu">
+                        SISTEMA DE MONITORAMENTO FERROVIÁRIO
+                    </p>
+
                 </div>
+
             </div>
 
             <div id="botoes_menu">
+
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela Inicial
                 </button>
@@ -65,120 +78,192 @@ $id = $_GET["id"];
                     Visualização de Rotas
                 </button>
 
-                <button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
                     Usuários Cadastrados
                 </button>
 
             </div>
+
         </div>
 
-            <button id="botao_voltar" onclick="usuariosCadastrados()">
-                Retornar
-            </button>
+        <button id="botao_voltar" onclick="usuariosCadastrados()">
+            Retornar
+        </button>
 
         <main>
 
             <div class="fundo_form_cadastros">
 
                 <div class="flex_column">
-                    <div layout_cadastro>
-                        <div class="borda_verde_flex">
-                            <h1 class="titulo_cadastro_form">Edição de Usuários</h1>
-                        </div>
-                        <div class="flex_dados">
 
-                            <div class="inserir_dados_cadastro">
+                    <div class="borda_verde_flex">
 
-                                <form action="editar_usuario.php?id=<?php echo $id; ?>" method="POST" id="form_cadastro">
-                                    <div class="flex_column">
+                        <h1 class="titulo_cadastro_form">
+                            Edição de Usuários
+                        </h1>
 
-                                        <div class="flex_column">
-                                            <div class="flex_column" id="campos_cadastro_sensores">
-                                                <div class="flex_column">
-                                                    <label for="nome" class="label_form">Nome:</label>
-                                                    <input type="text" name="nome" class="input_form">
-                                                </div>
-
-                                                <div class="flex_column">
-                                                    <label for="usuario" class="label_form">Usuário:</label>
-                                                    <input type="text" name="usuario" class="input_form">
-                                                </div>
-
-                                                <div class="flex_column">
-                                                    <label for="email" class="label_form">E-mail:</label>
-                                                    <input type="email" name="email" class="input_form">
-                                                </div>
-
-                                                <div class="flex_column">
-                                                    <label for="senha" class="label_form">Senha:</label>
-                                                    <input type="password" name="senha" class="input_form">
-                                                </div>
-
-                                                <div class="flex_column">
-                                                    <label for="tipo_perfil" class="label_form">Tipo de cargo:</label>
-                                                    <select name="perfil" id="perfil" class="input_form">
-                                                        <option value="funcionario">Funcionário</option>
-                                                        <option value="admin">Administrador</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                        
-                            </form>
-
-                            <div class=cep>
-                                <div class="inserir_dados_cadastro">
-                                        <form action="editar_usuario.php?id=<?php echo $id; ?>" method="POST" id="form_cadastro">
-                                            <div class="flex_column">
-
-                                                <div class="flex_column">
-                                                    <div class="flex_column" id="campos_cadastro_sensores">
-                                                        <div class="flex_column">
-                                                            <label for="cep" class="label_form">CEP:</label>
-                                                            <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
-                                                        </div>
-
-                                                        <div class="flex_column">
-                                                            <label for="logradouro" class="label_form">Logradouro:</label>
-                                                            <input type="text" id="logradouro" name="logradouro" class="input_form">
-                                                        </div>
-
-                                                        <div class="flex_column">
-                                                            <label for="bairro" class="label_form">Bairro:</label>
-                                                            <input type="text" id="bairro" name="bairro" class="input_form">
-                                                        </div>
-
-                                                        <div class="flex_column">
-                                                            <label for="cidade" class="label_form">Cidade:</label>
-                                                            <input type="text" id="cidade" name="cidade" class="input_form">
-                                                        </div>
-
-                                                        <div class="flex_column">
-                                                            <label for="uf" class="label_form">UF:</label>
-                                                            <input type="text" id="uf" name="uf" class="input_form">
-                                                        </div>
-                                                            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                                <div class="flex_botao">
-                                    <div class="borda_verde_flex">
-                                        <button type="submit" form="form_cadastro" class="botao_form_cadastro">Editar</button>
-                                    </div>
-                                </div>
                     </div>
-                </div>
-            </div>
-        
-        </main>
 
+                    <div class="inserir_dados_cadastro">
+
+                        <form action="editar_usuario.php?id=<?php echo $id; ?>"
+                            method="POST"
+                            id="form_cadastro">
+
+                            <div class="campos_lado_a_lado">
+
+                                <!-- PRIMEIRA LINHA -->
+
+                                <div class="campo_form">
+
+                                    <label for="nome" class="label_form">
+                                        Nome:
+                                    </label>
+
+                                    <input type="text"
+                                        name="nome"
+                                        id="nome"
+                                        class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="usuario" class="label_form">
+                                        Usuário:
+                                    </label>
+
+                                    <input type="text"
+                                        name="usuario"
+                                        id="usuario"
+                                        class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="email" class="label_form">
+                                        E-mail:
+                                    </label>
+
+                                    <input type="email"
+                                        name="email"
+                                        id="email"
+                                        class="input_form">
+
+                                </div>
+
+                                <!-- SEGUNDA LINHA -->
+
+                                <div class="campo_form">
+
+                                    <label for="senha" class="label_form">
+                                        Senha:
+                                    </label>
+
+                                    <input type="password"
+                                        name="senha"
+                                        id="senha"
+                                        class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="perfil" class="label_form">
+                                        Tipo de cargo:
+                                    </label>
+
+                                    <select name="perfil"
+                                        id="perfil"
+                                        class="input_form">
+
+                                        <option value="funcionario">
+                                            Funcionário
+                                        </option>
+
+                                        <option value="admin">
+                                            Administrador
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="cep" class="label_form">
+                                        CEP:
+                                    </label>
+
+                                    <input type="text"
+                                        id="cep"
+                                        name="cep"
+                                        class="input_form"
+                                        onblur="consultarCEP()">
+
+                                </div>
+
+                                <!-- TERCEIRA LINHA -->
+
+                                <div class="campo_form">
+
+                                    <label for="logradouro" class="label_form">
+                                        Logradouro:
+                                    </label>
+
+                                    <input type="text"
+                                        id="logradouro"
+                                        name="logradouro"
+                                        class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="bairro" class="label_form">
+                                        Bairro:
+                                    </label>
+
+                                    <input type="text"
+                                        id="bairro"
+                                        name="bairro"
+                                        class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="cidade" class="label_form">
+                                        Cidade:
+                                    </label>
+
+                                    <input type="text"
+                                        id="cidade"
+                                        name="cidade"
+                                        class="input_form">
+
+                                </div>
+
+                            </div>
+
+                            <div class="borda_verde_flex">
+
+                                <button type="submit" class="botao_form_cadastro">
+                                    Editar
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
 
         <script src="../scripts/script.js"></script>
 
