@@ -1182,15 +1182,19 @@ a.botao_crud_excluir.botao_excluir:hover {
     font-size: 20px;
 }
 
+
 #email_cadastro {
     background-color: var(--verde-musgo);
     border: 0;
-    padding: 5px;
+    padding: 6px;
+    border: 2px solid var(--verde-escuro-musgo);
     border-radius: 5px;
     margin-bottom: 20px;
     color: var(--branco);
     font-size: 20px;
 }
+
+
 
 #senha {
     background-color: var(--marrom);
@@ -1206,6 +1210,7 @@ a.botao_crud_excluir.botao_excluir:hover {
     background-color: var(--verde-musgo);
     border: 0;
     padding: 5px;
+    border: 2px solid var(--verde-escuro-musgo);
     border-radius: 5px;
     margin-bottom: 20px;
     color: var(--branco);
