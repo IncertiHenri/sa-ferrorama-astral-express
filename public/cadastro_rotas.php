@@ -45,12 +45,19 @@ if ($resultado_usuario === false) {
 
     <div class="conteudo">
 
-        <header>
-            <div id="navbar">
-                <p class="acesso_admin">Olá, <?php echo $_SESSION['usuario']; ?>!</p>
-                <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
-            </div>
-        </header>
+ <header>
+    <div id="navbar">
+        <p class="acesso_admin">
+            Olá, <?php echo $_SESSION['user']; ?>!
+        </p>
+
+        <div class="sem_flex">
+            <button id="botao_sair" onclick="sair()">
+                Sair do Sistema
+            </button>
+        </div>
+    </div>
+</header>
 
         <div class="menu">
 

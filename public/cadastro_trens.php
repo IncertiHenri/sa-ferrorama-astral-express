@@ -27,18 +27,18 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     <div class="conteudo">
 
         <header>
-            <div id="navbar">
-                <p class="acesso_admin">
-                    Olá, <?php echo $_SESSION['usuario']; ?>!
-                </p>
+    <div id="navbar">
+        <p class="acesso_admin">
+            Olá, <?php echo $_SESSION['user']; ?>!
+        </p>
 
-                <div class="sem_flex">
-                    <button id="botao_sair" onclick="sair()">
-                        Sair do Sistema
-                    </button>
-                </div>
-            </div>
-        </header>
+        <div class="sem_flex">
+            <button id="botao_sair" onclick="sair()">
+                Sair do Sistema
+            </button>
+        </div>
+    </div>
+</header>
 
         <div class="menu">
 
