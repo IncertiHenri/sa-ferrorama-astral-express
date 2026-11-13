@@ -196,7 +196,7 @@ $id = $_GET["id"];
 
                             </div>
 
-                            <div class="borda_verde_flex">
+                            <div class="container_botao_cadastro">
 
                                 <button type="submit" class="botao_form_cadastro">
                                     Atualizar

@@ -214,13 +214,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
                             </div>
 
-                            <div class="borda_verde_flex">
-
-                                <button type="submit" class="botao_form_cadastro">
-                                    Cadastrar
-                                </button>
-
-                            </div>
+                           <div class="container_botao_cadastro">
+                            <button type="submit" class="botao_form_cadastro">
+                                Cadastrar
+                            </button>
+                        </div>
 
                         </form>
 
