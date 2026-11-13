@@ -1182,6 +1182,16 @@ a.botao_crud_excluir.botao_excluir:hover {
     font-size: 20px;
 }
 
+#email_cadastro {
+    background-color: var(--verde-musgo);
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--branco);
+    font-size: 20px;
+}
+
 #senha {
     background-color: var(--marrom);
     border: 0;
@@ -1190,4 +1200,40 @@ a.botao_crud_excluir.botao_excluir:hover {
     margin-bottom: 20px;
     color: var(--branco);
     font-size: 20px;
+}
+
+#senha_cadastro {
+    background-color: var(--verde-musgo);
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--branco);
+    font-size: 20px;
+}
+
+.formulario-cadastro {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.formulario-cadastro form {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.formulario-cadastro .campos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 15px;
+}
+
+.formulario-cadastro input,
+.formulario-cadastro select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario-cadastro button {
+    margin-top: 15px;
 }

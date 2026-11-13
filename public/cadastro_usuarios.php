@@ -1,3 +1,4 @@
+
 <?php
 
 include("../infra/conexao.php");
@@ -19,10 +20,10 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
     <link rel="stylesheet" href="../assets/style/style.css">
 
-    <title>Usuários cadastrados</title>
+    <title>Cadastro de Usuários</title>
 </head>
 
-<body id="usuarios_cadastrados">
+<body id="sessao_cadastro">
 
     <div class="conteudo">
 
@@ -33,11 +34,9 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                     Olá, <?php echo $_SESSION['usuario']; ?>!
                 </p>
 
-                <div class="sem_flex">
-                    <button id="botao_sair" onclick="sair()">
-                        Sair do Sistema
-                    </button>
-                </div>
+                <button id="botao_sair" onclick="sair()">
+                    Sair do Sistema
+                </button>
 
             </div>
         </header>
@@ -89,90 +88,137 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
             Retornar
         </button>
 
-        <div class="fundo_cadastros">
+        <main>
 
-            <div class="cadastros">
+            <div class="fundo_form_cadastros">
 
-                <div class="borda_verde_flex">
-                    <h1 class="titulo_cadastro_form">
-                        Cadastro de Usuários
-                    </h1>
-                </div>
+                <div class="flex_column">
 
-                <div class="tabela">
+                    <div class="borda_verde_flex">
 
-                    <div class="borda_verde">
+                        <h1 class="titulo_cadastro_form">
+                            Cadastro de Usuários
+                        </h1>
+
+                    </div>
+
+                    <div class="inserir_dados_cadastro">
 
                         <form action="cadastrar_usuarios.php" method="POST" id="formulario_cadastro_usuarios">
 
-                            <div class="flex_column">
+                            <div class="campos_lado_a_lado">
 
-                                <div class="campos_usuarios">
+                                <!-- PRIMEIRA LINHA -->
 
-                                    <!-- PRIMEIRA LINHA: 4 CAMPOS -->
+                                <div class="campo_form">
 
-                                    <div class="flex_column">
-                                        <label for="nome" class="label_form">Nome:</label>
-                                        <input type="text" name="nome" id="nome" class="input_form" required>
-                                    </div>
+                                    <label for="nome" class="label_form">
+                                        Nome:
+                                    </label>
 
-                                    <div class="flex_column">
-                                        <label for="usuario" class="label_form">Usuário:</label>
-                                        <input type="text" name="usuario" id="usuario" class="input_form" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="email" class="label_form">E-mail:</label>
-                                        <input type="email" name="email" id="email" class="input_form" required>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="senha" class="label_form">Senha:</label>
-                                        <input type="password" name="senha" id="senha" class="input_form" required>
-                                    </div>
-
-                                    <!-- SEGUNDA LINHA: 5 CAMPOS -->
-
-                                    <div class="flex_column">
-                                        <label for="perfil" class="label_form">Tipo de cargo:</label>
-
-                                        <select name="perfil" id="perfil" class="input_form">
-                                            <option value="funcionario">Funcionário</option>
-                                            <option value="admin">Administrador</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="cep" class="label_form">CEP:</label>
-                                        <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="logradouro" class="label_form">Logradouro:</label>
-                                        <input type="text" id="logradouro" name="logradouro" class="input_form">
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="bairro" class="label_form">Bairro:</label>
-                                        <input type="text" id="bairro" name="bairro" class="input_form">
-                                    </div>
-
-                                    <div class="flex_column">
-                                        <label for="cidade" class="label_form">Cidade:</label>
-                                        <input type="text" id="cidade" name="cidade" class="input_form">
-                                    </div>
+                                    <input type="text" name="nome" id="nome" class="input_form" required>
 
                                 </div>
 
-                                <div class="flex_botao">
+                                <div class="campo_form">
 
-                                    <div class="borda_verde_flex">
-                                        <button type="submit" class="botao_form_cadastro">
-                                            Cadastrar
-                                        </button>
-                                    </div>
+                                    <label for="usuario" class="label_form">
+                                        Usuário:
+                                    </label>
+
+                                    <input type="text" name="usuario" id="usuario" class="input_form" required>
 
                                 </div>
+
+                                <div class="campo_form">
+
+                                    <label for="email" class="label_form">
+                                        E-mail:
+                                    </label>
+
+                                    <input type="email" name="email" id="email" class="input_form" required>
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="senha" class="label_form">
+                                        Senha:
+                                    </label>
+
+                                    <input type="password" name="senha" id="senha" class="input_form" required>
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="perfil" class="label_form">
+                                        Tipo de cargo:
+                                    </label>
+
+                                    <select name="perfil" id="perfil" class="input_form" required>
+
+                                        <option value="funcionario">
+                                            Funcionário
+                                        </option>
+
+                                        <option value="admin">
+                                            Administrador
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="cep" class="label_form">
+                                        CEP:
+                                    </label>
+
+                                    <input type="text" id="cep" name="cep" class="input_form" onblur="consultarCEP()">
+
+                                </div>
+
+                                <!-- TERCEIRA LINHA -->
+
+                                <div class="campo_form">
+
+                                    <label for="logradouro" class="label_form">
+                                        Logradouro:
+                                    </label>
+
+                                    <input type="text" id="logradouro" name="logradouro" class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="bairro" class="label_form">
+                                        Bairro:
+                                    </label>
+
+                                    <input type="text" id="bairro" name="bairro" class="input_form">
+
+                                </div>
+
+                                <div class="campo_form">
+
+                                    <label for="cidade" class="label_form">
+                                        Cidade:
+                                    </label>
+
+                                    <input type="text" id="cidade" name="cidade" class="input_form">
+
+                                </div>
+
+                            </div>
+
+                            <div class="borda_verde_flex">
+
+                                <button type="submit" class="botao_form_cadastro">
+                                    Cadastrar
+                                </button>
 
                             </div>
 
@@ -184,11 +230,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
             </div>
 
-        </div>
+        </main>
+
+        <script src="../scripts/script.js"></script>
 
     </div>
-
-    <script src="../scripts/script.js"></script>
 
 </body>
 
