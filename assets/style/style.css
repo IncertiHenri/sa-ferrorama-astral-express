@@ -1237,3 +1237,13 @@ a.botao_crud_excluir.botao_excluir:hover {
 .formulario-cadastro button {
     margin-top: 15px;
 }
+
+.container_botao_cadastro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--verde-musgo);
+    border: 2px solid var(--verde-musgo);
+    padding: 10px;
+    box-sizing: border-box;
+}
