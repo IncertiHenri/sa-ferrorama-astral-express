@@ -222,7 +222,8 @@ As permissões de visualização de todo e qualquer Trem, Rota e Usuário é con
 
 # Estrutura geral do projeto
 
-Ferrorama Astral Express:.
+```text
+ASTRAL-EXPRESS:.
 │   .gitignore
 │   index.php
 │   LICENSE
@@ -230,37 +231,17 @@ Ferrorama Astral Express:.
 │   
 ├───assets
 │   ├───img
-│   │       3_pontos.png
 │   │       banner_trem.jpg
 │   │       botao_excluir.png
-│   │       cadastro_relatorios.png
-│   │       cadastro_sensores.png
-│   │       calendario_branco.png
-│   │       calendario_preto.png
-│   │       consumo_medio.png
 │   │       estacao.png
 │   │       estacao_2.png
-│   │       falha.png
-│   │       filtro.png
 │   │       fundo.png
 │   │       landing_page_nova.png
 │   │       landing_page_velha.png
-│   │       mapa_trilho.png
-│   │       mecanica.png
-│   │       monitoramento_tempo.png
 │   │       pesquisa_PDO.png
-│   │       recarregar.png
-│   │       sair.png
-│   │       tela_inicial.png
 │   │       tela_inicial_antiga.jpg
 │   │       tela_inicial_nova.png
-│   │       temperatura.png
 │   │       trem.PNG
-│   │       trem_boas_vindas.png
-│   │       trem_botao.png
-│   │       usuario.png
-│   │       usuarios.png
-│   │       velocidade.png
 │   │       
 │   └───style
 │           style.css
@@ -279,7 +260,6 @@ Ferrorama Astral Express:.
 │   └───pesquisas
 │           apis.md
 │           identidade_visual.md
-│           image.png
 │           pdo.md
 │           
 ├───infra
@@ -314,16 +294,37 @@ Ferrorama Astral Express:.
 │       
 └───scripts
         script.js
+```
 
 # Imagens de telas da versão final
 
 ![Landing page](assets/img/landing_page_nova.png)
+![Tela login](assets/img/tela_login.png)
 ![Tela inicial](assets/img/tela_inicial_nova.png)
+
+![Visualizacao trens](assets/img/visu_trens.png)
+![Cadastro trens](assets/img/cadastro_trem.png)
+![Atualizar trens](assets/img/atualizar_trem.png)
+
+![Visualizacao rotas](assets/img/visu_rotas.png)
+![Cadastro rotas](assets/img/cadastro_rota.png)
+![Atualizar rotas](assets/img/atualizar_rota.png)
+
+![Visualizacao usuarios](assets/img/visu_usuarios.png)
+![Cadastro usuarios](assets/img/cadastro_usuario.png)
+![Atualizar usuarios](assets/img/atualizar_usuario.png)
+
+![Excluir](assets/img/excluir.png)
 
 # Integrantes e suas contribuições
 
-- Henrique Incerti
-- Serenna Tavares
-- Thaís Duarte
-- Natan Vitor
-- Contribuição de Annie Marrie
+- Henrique Incerti:
+        Desenvolvimento backend e frontend, documentação, gerenciamento e apresentação.
+- Serenna Tavares:
+        Desenvolvimento backend e frontend, documentação, gerenciamento e apresentação.
+- Thaís Duarte:
+        Desenvolvimento backend e frontend, documentação, gerenciamento e apresentação.
+- Natan Vitor:
+        Desenvolvimento backend e frontend, documentação, gerenciamento e apresentação.
+- Annie Marrie:
+        Desenvolvimento frontend.
