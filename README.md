@@ -328,3 +328,5 @@ ASTRAL-EXPRESS:.
         Desenvolvimento backend e frontend, documentação, gerenciamento e apresentação.
 - Annie Marrie:
         Desenvolvimento frontend.
+
+### Que nessa jornada, possamos chegar até as estrelas!
