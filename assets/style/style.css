@@ -704,7 +704,6 @@ main {
 
 a.botao_crud_excluir.botao_excluir:hover {
     background-color: var(--vermelho-escuro);
-    border: 1px solid var(--vermelho-claro);
 }
 
 /* RELATÓRIOS */
