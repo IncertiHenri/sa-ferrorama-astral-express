@@ -132,21 +132,21 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
                                 <div class="campo_form">
 
-                                    <label for="email" class="label_form">
+                                    <label for="email_cadastro" class="label_form">
                                         E-mail:
                                     </label>
 
-                                    <input type="email" name="email" id="email" class="input_form" required>
+                                    <input type="email" name="email" id="email_cadastro" class="input_form" required>
 
                                 </div>
 
                                 <div class="campo_form">
 
-                                    <label for="senha" class="label_form">
+                                    <label for="senha_cadastro" class="label_form">
                                         Senha:
                                     </label>
 
-                                    <input type="password" name="senha" id="senha" class="input_form" required>
+                                    <input type="password" name="senha" id="senha_cadastro" class="input_form" required>
 
                                 </div>
 
@@ -214,13 +214,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
                             </div>
 
-                            <div class="borda_verde_flex">
-
-                                <button type="submit" class="botao_form_cadastro">
-                                    Cadastrar
-                                </button>
-
-                            </div>
+                           <div class="container_botao_cadastro">
+                            <button type="submit" class="botao_form_cadastro">
+                                Cadastrar
+                            </button>
+                        </div>
 
                         </form>
 
