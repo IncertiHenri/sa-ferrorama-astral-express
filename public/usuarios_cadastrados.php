@@ -88,7 +88,6 @@ if (!isset($_SESSION['usuario'])) {
                         <div class="tabela">
 
                             <table>
-
                                 <tr class="titulos_tabelas">
                                     <td class="texto_claro">Matrícula</td>
                                     <td class="texto_claro">Nome</td>
@@ -120,10 +119,8 @@ if (!isset($_SESSION['usuario'])) {
                                     echo "</tr>";
                                 }
                                 ?>
-
                         </div>
                         </table>
-
                     </div>
                 </div>
 
