@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "sistema_ferroviario_astral_express2";
+$database = "sistema_ferroviario_astral_express";
 $port = 3308;
 
 $conn = new mysqli($host, $user, $pass, $database, $port);

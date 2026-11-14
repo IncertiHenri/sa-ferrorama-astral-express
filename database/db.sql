@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express2;
+CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express;
 
 USE sistema_ferroviario_astral_express2;
 
