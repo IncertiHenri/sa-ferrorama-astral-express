@@ -1262,3 +1262,78 @@ a.botao_crud_excluir.botao_excluir:hover {
     padding: 10px;
     box-sizing: border-box;
 }
+
+#formulario_cadastro_usuarios {
+    width: 100%;
+}
+
+#formulario_cadastro_usuarios .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_cadastro_usuarios .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_cadastro_usuarios .container_botao_cadastro {
+    padding: 10px;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}
+
+#formulario_cadastro_trens {
+    width: 100%;
+}
+
+#formulario_cadastro_trens .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_cadastro_trens .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_cadastro_trens .campo_form {
+    width: 100%;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}
+
+#formulario_cadastro_rotas {
+    width: 100%;
+}
+
+#formulario_cadastro_rotas .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_cadastro_rotas .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_cadastro_rotas .campo_form {
+    width: 100%;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}

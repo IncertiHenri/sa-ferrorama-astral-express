@@ -167,19 +167,19 @@ if ($resultado_usuario === false) {
 
                             </div>
 
-                           <div class="container_botao_cadastro">
-                            <button type="submit" class="botao_form_cadastro">
-                                Cadastrar
-                            </button>
-                        </div>
-
                         </form>
 
                     </div>
 
+                    <div class="borda_verde_flex">
+
+                            <button type="submit" form="form_cadastro" class="botao_form_cadastro">Cadastrar</button>
+
+                        </div>
+
                 </div>
 
-            </div>
+</div>
 
         </main>
 
