@@ -672,7 +672,6 @@ main {
 .botao_crud_excluir {
     background-color: var(--vermelho-claro);
     color: var(--branco);
-    border: 1px solid var(--preto);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
     padding: 10px;
@@ -1331,6 +1330,81 @@ a.botao_crud_excluir.botao_excluir:hover {
 }
 
 #formulario_cadastro_rotas .campo_form {
+    width: 100%;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}
+
+#formulario_edicao_usuarios {
+    width: 100%;
+}
+
+#formulario_edicao_usuarios .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_edicao_usuarios .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_edicao_usuarios .campo_form {
+    width: 100%;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}
+
+#formulario_edicao_rotas {
+    width: 100%;
+}
+
+#formulario_edicao_rotas .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_edicao_rotas .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_edicao_rotas .campo_form {
+    width: 100%;
+}
+
+.inserir_dados_cadastro + .borda_verde_flex {
+    margin-top: 10px;
+}
+
+#formulario_edicao_trens {
+    width: 100%;
+}
+
+#formulario_edicao_trens .campos_lado_a_lado {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#formulario_edicao_trens .input_form {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#formulario_edicao_trens .campo_form {
     width: 100%;
 }
 

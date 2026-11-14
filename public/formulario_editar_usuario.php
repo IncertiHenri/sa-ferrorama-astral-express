@@ -29,19 +29,19 @@ $id = $_GET["id"];
 
     <div class="conteudo">
 
-       <header>
-    <div id="navbar">
-        <p class="acesso_admin">
-            Olá, <?php echo $_SESSION['user']; ?>!
-        </p>
+        <header>
+            <div id="navbar">
+                <p class="acesso_admin">
+                    Olá, <?php echo $_SESSION['user']; ?>!
+                </p>
 
-        <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">
-                Sair do Sistema
-            </button>
-        </div>
-    </div>
-</header>
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">
+                        Sair do Sistema
+                    </button>
+                </div>
+            </div>
+        </header>
 
         <div class="menu">
 
@@ -108,10 +108,9 @@ $id = $_GET["id"];
 
                         <form action="editar_usuario.php?id=<?php echo $id; ?>"
                             method="POST"
-                            id="form_cadastro">
+                            id="formulario_edicao_usuarios">
 
                             <div class="campos_lado_a_lado">
-
 
                                 <div class="campo_form">
 
@@ -149,8 +148,7 @@ $id = $_GET["id"];
                                         Senha:
                                     </label>
 
-                                    <input type="password"
-                                        name="senha" id="senha_cadastro" class="input_form">
+                                    <input type="password" name="senha" id="senha_cadastro" class="input_form">
 
                                 </div>
 
@@ -160,9 +158,7 @@ $id = $_GET["id"];
                                         Tipo de cargo:
                                     </label>
 
-                                    <select name="perfil"
-                                        id="perfil"
-                                        class="input_form">
+                                    <select name="perfil" id="perfil" class="input_form">
 
                                         <option value="funcionario">
                                             Funcionário
@@ -190,7 +186,6 @@ $id = $_GET["id"];
 
                                 </div>
 
-                                
                                 <div class="campo_form">
 
                                     <label for="logradouro" class="label_form">
@@ -232,16 +227,14 @@ $id = $_GET["id"];
 
                             </div>
 
-                            <div class="container_botao_cadastro">
-
-                                <button type="submit" class="botao_form_cadastro">
-                                    Atualizar
-                                </button>
-
-                            </div>
-
                         </form>
 
+                    </div>
+
+                    <div class="borda_verde_flex">
+                        <button type="submit" form="formulario_edicao_usuarios" class="botao_form_cadastro">
+                            Atualizar
+                        </button>
                     </div>
 
                 </div>

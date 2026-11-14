@@ -44,18 +44,18 @@ if ($resultado_usuario === false) {
     <div class="conteudo">
 
         <header>
-    <div id="navbar">
-        <p class="acesso_admin">
-            Olá, <?php echo $_SESSION['user']; ?>!
-        </p>
+            <div id="navbar">
+                <p class="acesso_admin">
+                    Olá, <?php echo $_SESSION['user']; ?>!
+                </p>
 
-        <div class="sem_flex">
-            <button id="botao_sair" onclick="sair()">
-                Sair do Sistema
-            </button>
-        </div>
-    </div>
-</header>
+                <div class="sem_flex">
+                    <button id="botao_sair" onclick="sair()">
+                        Sair do Sistema
+                    </button>
+                </div>
+            </div>
+        </header>
 
         <div class="menu">
 
@@ -123,7 +123,8 @@ if ($resultado_usuario === false) {
                     <div class="inserir_dados_cadastro">
 
                         <form action="editar_rota.php?id=<?php echo urlencode($id); ?>"
-                            method="POST" id="form_cadastro">
+                            method="POST"
+                            id="formulario_edicao_rotas">
 
                             <div class="campos_lado_a_lado">
 
@@ -215,16 +216,14 @@ if ($resultado_usuario === false) {
 
                             </div>
 
-                            <div class="container_botao_cadastro">
-
-                                <button type="submit" class="botao_form_cadastro">
-                                    Atualizar
-                                </button>
-
-                            </div>
-
                         </form>
 
+                    </div>
+
+                    <div class="borda_verde_flex">
+                        <button type="submit" form="formulario_edicao_rotas" class="botao_form_cadastro">
+                            Atualizar
+                        </button>
                     </div>
 
                 </div>
