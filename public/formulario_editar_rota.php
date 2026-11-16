@@ -183,13 +183,22 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <select name="trem_associado" id="trem_associado"
-                                        class="input_form" value="<?php echo $rota['trem_associado']; ?>" required>
+                                        class="input_form" required>
 
                                         <option value="">Selecione um Trem</option>
 
                                         <?php
+                                        $sql_trem_associado = "SELECT id_trem FROM trem_rota WHERE id_rota = $id";
+                                        $resultado_associado = mysqli_query($conn, $sql_trem_associado);
+                                        $trem_associado = mysqli_fetch_assoc($resultado_associado);
+
                                         while ($trem = mysqli_fetch_assoc($resultado_trem)) {
-                                            echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
+
+                                            $selecionado = ($trem['id_trem'] == $trem_associado['id_trem']) ? 'selected' : '';
+
+                                            echo "<option value='{$trem['id_trem']}' $selecionado>"
+                                                . htmlspecialchars($trem['nome_trem']) .
+                                                "</option>";
                                         }
                                         ?>
 
@@ -210,7 +219,12 @@ if ($resultado_usuario === false) {
 
                                         <?php
                                         while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
-                                            echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
+
+                                        $selecionado = ($usuario['id_usuario'] == $rota['id_usuario']) ? 'selected' : '';
+
+                                        echo "<option value='{$usuario['id_usuario']}' $selecionado>"
+                                            . htmlspecialchars($usuario['nome']) .
+                                            "</option>";
                                         }
                                         ?>
 

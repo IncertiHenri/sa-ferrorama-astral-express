@@ -158,11 +158,11 @@ $id = $_GET["id"];
                                     </label>
 
                                     <select name="status" id="status"
-                                        class="input_form" value="<?php echo $trem['status']; ?>" required>
+                                        class="input_form" required>
 
                                         <option value="">Selecione</option>
-                                        <option value="ativo">Ativo</option>
-                                        <option value="inativo">Inativo</option>
+                                        <option value="ativo"  <?php if ($trem['status'] == 'ativo') echo 'selected'; ?>>Ativo</option>
+                                        <option value="inativo" <?php if ($trem['status'] == 'inativo') echo 'selected'; ?>>Inativo</option>
 
                                     </select>
 
@@ -175,7 +175,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <select name="funcionario" id="funcionario"
-                                        class="input_form" value="<?php echo $trem['funcionario']; ?>" required>
+                                        class="input_form" required>
 
                                         <option value="">Selecione</option>
 
@@ -187,8 +187,10 @@ $id = $_GET["id"];
 
                                         while ($usuario = mysqli_fetch_assoc($busca)) {
 
-                                            echo "<option value='" . $usuario["id_usuario"] . "'>"
-                                                . htmlspecialchars($usuario["usuario"]) .
+                                            $selecionado = ($usuario['id_usuario'] == $trem['id_usuario']) ? 'selected' : '';
+
+                                            echo "<option value='" . $usuario['id_usuario'] . "' $selecionado>"
+                                                . htmlspecialchars($usuario['usuario']) .
                                                 "</option>";
 
                                         }
