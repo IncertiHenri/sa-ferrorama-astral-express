@@ -12,6 +12,10 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 $id = $_GET["id"];
 
+    $sql = "SELECT * FROM trem WHERE id_trem = $id";
+    $result = mysqli_query($conn, $sql);
+    $trem = mysqli_fetch_assoc($result);
+
 ?>
 
 <html lang="pt-BR">
@@ -121,7 +125,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <input type="text" name="nome_trem" id="nome_trem"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $trem['nome_trem']; ?>" required>
 
                                 </div>
 
@@ -132,7 +136,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <input type="text" name="modelo" id="modelo"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $trem['modelo']; ?>" required>
 
                                 </div>
 
@@ -143,7 +147,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <input type="number" name="capacidade" id="capacidade"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $trem['capacidade']; ?>" required>
 
                                 </div>
 
@@ -154,7 +158,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <select name="status" id="status"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $trem['status']; ?>" required>
 
                                         <option value="">Selecione</option>
                                         <option value="ativo">Ativo</option>
@@ -171,7 +175,7 @@ $id = $_GET["id"];
                                     </label>
 
                                     <select name="funcionario" id="funcionario"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $trem['funcionario']; ?>" required>
 
                                         <option value="">Selecione</option>
 

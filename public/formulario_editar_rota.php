@@ -26,6 +26,10 @@ if ($resultado_usuario === false) {
     die('Erro na procura de usuários: ' . mysqli_error($conn));
 }
 
+    $sql = "SELECT * FROM rota WHERE id_rota = $id";
+    $result = mysqli_query($conn, $sql);
+    $rota = mysqli_fetch_assoc($result);
+
 ?>
 
 <html lang="pt-BR">
@@ -135,7 +139,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <input type="date" name="hora" id="hora"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['hora']; ?>" required>
 
                                 </div>
 
@@ -146,7 +150,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <input type="text" name="origem" id="origem"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['origem']; ?>" required>
 
                                 </div>
 
@@ -157,7 +161,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <input type="text" name="destino" id="destino"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['destino']; ?>" required>
 
                                 </div>
 
@@ -168,7 +172,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <input type="time" name="tempo" id="tempo"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['tempo']; ?>" required>
 
                                 </div>
 
@@ -179,7 +183,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <select name="trem_associado" id="trem_associado"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['trem_associado']; ?>" required>
 
                                         <option value="">Selecione um Trem</option>
 
@@ -200,7 +204,7 @@ if ($resultado_usuario === false) {
                                     </label>
 
                                     <select name="usuario_associado" id="usuario_associado"
-                                        class="input_form" required>
+                                        class="input_form" value="<?php echo $rota['usuario_associado']; ?>" required>
 
                                         <option value="">Selecione um Usuário</option>
 

@@ -10,7 +10,12 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     exit();
 }
 
-$id = $_GET["id"];
+    $id = $_GET["id"];
+
+    $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
+    $result = mysqli_query($conn, $sql);
+    $usuario = mysqli_fetch_assoc($result);
+
 
 ?>
 
@@ -118,7 +123,7 @@ $id = $_GET["id"];
                                         Nome:
                                     </label>
 
-                                    <input type="text" name="nome" id="nome" class="input_form">
+                                    <input type="text" name="nome" id="nome" class="input_form" value="<?php echo $usuario['nome']; ?>">
 
                                 </div>
 
@@ -128,7 +133,7 @@ $id = $_GET["id"];
                                         Usuário:
                                     </label>
 
-                                    <input type="text" name="usuario" id="usuario" class="input_form">
+                                    <input type="text" name="usuario" id="usuario" class="input_form" value="<?php echo $usuario['usuario']; ?>">
 
                                 </div>
 
@@ -138,7 +143,7 @@ $id = $_GET["id"];
                                         E-mail:
                                     </label>
 
-                                    <input type="email" name="email" id="email_cadastro" class="input_form">
+                                    <input type="email" name="email" id="email_cadastro" class="input_form" value="<?php echo $usuario['email']; ?>">
 
                                 </div>
 
@@ -160,11 +165,11 @@ $id = $_GET["id"];
 
                                     <select name="perfil" id="perfil" class="input_form">
 
-                                        <option value="funcionario">
+                                        <option value="funcionario" <?php if ($usuario['perfil'] == 'funcionario') echo 'selected'; ?>>
                                             Funcionário
                                         </option>
 
-                                        <option value="admin">
+                                        <option value="admin" <?php if ($usuario['perfil'] == 'admin') echo 'selected'; ?>>
                                             Administrador
                                         </option>
 
@@ -182,6 +187,7 @@ $id = $_GET["id"];
                                         id="cep"
                                         name="cep"
                                         class="input_form"
+                                        value="<?php echo $usuario['cep']; ?>"
                                         onblur="consultarCEP()">
 
                                 </div>
@@ -195,7 +201,8 @@ $id = $_GET["id"];
                                     <input type="text"
                                         id="logradouro"
                                         name="logradouro"
-                                        class="input_form">
+                                        class="input_form"
+                                        value="<?php echo $usuario['logradouro']; ?>">
 
                                 </div>
 
@@ -208,7 +215,8 @@ $id = $_GET["id"];
                                     <input type="text"
                                         id="bairro"
                                         name="bairro"
-                                        class="input_form">
+                                        class="input_form"
+                                        value="<?php echo $usuario['bairro']; ?>">
 
                                 </div>
 
@@ -221,7 +229,8 @@ $id = $_GET["id"];
                                     <input type="text"
                                         id="cidade"
                                         name="cidade"
-                                        class="input_form">
+                                        class="input_form"
+                                        value="<?php echo $usuario['cidade']; ?>">
 
                                 </div>
 
